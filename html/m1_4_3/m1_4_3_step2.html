@@ -139,7 +139,7 @@
                                 </div>
                                 <div class="btn_box">
                                     <button type="button" id="submitBtn" class="btn exam_fin">종료</button>
-                                    <button type="button" id="blankView" class="btn read_txt">본문 다시보기(5초)</button>
+                                    <button type="button" id="blankView" class="btn read_txt" disabled>본문 다시보기(5초)</button>
                                 </div>
                             </div>
                         </div>
@@ -232,6 +232,7 @@
     </div>
 
     <script>
+        var seconds = 0;
         $(document).ready(function() {
             var nums = $('.nums span');
             var counter = $('.counter');
@@ -258,9 +259,10 @@
                             setTimeout(function() {
                                 $('#countDown').fadeOut().removeClass('active'); // 1초 뒤에 #countDown 요소 숨기기
                                 $('.exam_timer_box').removeClass('non_time').addClass('active');; // 1초 뒤에 #countDown 요소 숨기기
-                                startTimer_ui();
+                                
+                                chgInp ();
                             }, 1000); // 1000 밀리초 = 1초
-                            chgInp ();
+                            
                         }
                     });
                 });
@@ -268,6 +270,7 @@
 
             // chgInp 함수 정의
             function chgInp() {
+                // $("#blankView").prop("disabled", true);
                 timerId = setTimeout(function () {
                     for (var i = 0; i < words.length; i++) {
                         var targetWord = words[i];
@@ -281,7 +284,9 @@
                         originalContent = originalContent.replace(targetWord, inputElement);
                     }
                     $("#blankExam").html(originalContent);
-                }, 1000);
+                    $("#blankView").prop("disabled", false);
+                    startTimer_ui();
+                }, 5000);
                 // 5000
             }
 
@@ -292,9 +297,13 @@
                     var targetWord = $(this).data("word");
                     $(this).replaceWith(targetWord);
                 });
+                seconds = seconds + 5
+                $('.sec').text(seconds.toString().padStart(2, '0'));
+                $("#blankView").prop("disabled", true);
                 setTimeout(function () {
                     $("#blankExam").html(originalContent);
                     $(".input_blank").prop("disabled", false);
+                    $("#blankView").prop("disabled", false);
                 }, 5000);
             });
 
@@ -341,7 +350,7 @@
             // 타이머 시간을 저장할 변수들을 초기화합니다.
             let hours = 0;
             let minutes = 0;
-            let seconds = 0;
+            seconds = 0;
             let timerInterval = null;
 
             // 타이머를 업데이트하는 함수입니다.

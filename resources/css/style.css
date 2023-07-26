@@ -135,7 +135,8 @@
 .btn.exam_start{background-color: var(--deep_blue);color: #fff;}
 .btn.exam_fin{background-color: var(--red);color: #fff;}
 .btn_refresh{padding: 12px;border: 1px solid var(--d9);line-height:0;border-radius:3px;cursor: pointer;}
-.btn.read_txt{background-color: var(--white);line-height:42px;color: var(--black);border: 1px solid var(--d9);}
+.btn.read_txt{background-color: var(--white);line-height:42px;color: var(--black);border: 1px solid var(--d9);transition: backgrond-color .3s ease;}
+#blankView:disabled{background-color:var(--f9);color: #888;}
 .file_save{background-color: var(--red);color: #fff;}
 .btn.file_submit{background-color: var(--white);line-height:42px;color: var(--black);border: 1px solid var(--d9);}
 .btn_list.normal{width: auto;padding: 0 20px;}
