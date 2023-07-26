@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>학습활동 || 팀별 괄호 맞추기 step2</title>
+    <link rel="stylesheet" href="../../resources/css/common.css">
+    <link rel="stylesheet" href="../../resources/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../../resources/css/content.css">
+    <script src="../../resources/js/jquery-3.6.1.min.js"></script>
+    <script src="../../resources/js/swiper-bundle.min.js"></script>
+    <script src="../../resources/js/ui.js"></script>
+
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <header id="header">
+            <div class="hd_inner">
+                <!-- <div id="ham_btn"><div class="line_box"></div></div> -->
+                <div class="hd_left">
+                    <h1 class="logo"><a href="/"><img src="../../resources/img/common/logo.svg" alt=""><span class="sound_only">소크라테스 교실</span></a></h1>
+                    <div class="menu">
+                        <div class="subject">국어</div>
+                        <div class="class"><span class="grade_sta">3</span>학년 <span class="class_sta">3</span>반</div>
+                        <div class="lesson">(<span class="date_sta">수</span>) <span class="lesson_sta">2,3</span>교시</div>
+                    </div>
+                </div>
+                <div class="util is_login">
+                    <!-- 로그링 -->
+                    <div class="member_zone">
+                        <div id="user_menu_btn" class="profile">
+                            <div class="user_infor">
+                                <span class="user_thumb"><img src="../../resources/img/common/user_thumb.svg" alt="유저프로필 이미지"></span>
+                                <span class="user_name"><span class="name_sta">홍길동</span>님</span>
+                            </div>
+                            <i class="icon arrow arrow_d"></i>
+                        </div>
+                        <div class="menu_box">
+                            <ul class="user_menu">
+                                <li><a href="./login.html">로그인</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- //로그인 -->
+                </div>
+            </div>
+        </header>
+        <!-- //header -->
+
+        <!-- container -->
+        <div id="container" class="sub">
+            <!-- intro -->
+            <section class="content_top sub">
+                <div class="inner inner_left">
+                    <div class="card_wrap">
+                        <ul class="card_list">
+                            <li class="card_item ty1">
+                                <div class="card_inner">
+                                    <div class="item_infor">
+                                        <div class="info_cate">
+                                            <div class="cate_date">5주</div>
+                                            <div class="cate_type group">조</div>
+                                        </div>
+                                        <div class="info_tit">
+                                            <div class="tit"> 
+                                                <span class="tit_cate">[M4-2-2]</span>
+                                                <span class="slash">/</span>
+                                                <span class="tit_name">조별 주관식 문제 풀이</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="btn_box">
+                                        <a href="./m4_2_2_step1.html" class="btn btn_attend "><i class="icon attend"></i><span class="btn_name">참여</span></a>
+                                        <a href="./m4_2_2_step2.html" class="btn btn_rating active"><i class="icon rating"></i><span class="btn_name">평가</span></a>
+                                        <a href="./m4_2_2_step4.html" class="btn btn_result"><i class="icon result"></i><span class="btn_name">결과</span></a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contents">
+                <div class="inner">
+                    <!-- profile_lnb -->
+                    <nav id="lnb">
+                        <div class="lnb_top" menu-cate="learning">
+                            <div class="top_cont">
+                                <div class="cate">learning</div>
+                                <div class="tit">학습활동</div>
+                            </div>
+                        </div>
+                        <div class="lnb_menu">
+                            <ul class="menu_list">
+                                <li class="menu_item"><a href="../../html/index.html">학습활동</a></li>
+                                <li class="menu_item"><a href="../../html/work_result/work_result_1.html">활동결과</a></li>
+                                <li class="menu_item"><a href="#none">수업안내</a></li>
+                                <li class="menu_item"><a href="#none">공지사항</a></li>
+                                <li class="menu_item"><a href="#none">Q&A</a></li>
+                                <li class="menu_item"><a href="#none">자료실</a></li>
+                                <li class="menu_item"><a href="#none">나기기</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <!-- //profile_lnb -->
+
+                    <!-- main_cont -->
+                    <div id="main">
+                        <div class="step_box">
+                            
+                            <div class="step_cont">
+                                <div class="step_tit2">아래 문제목록을 확인하고, 각각의 문제별로 풀이를 진행해주세요.</div>
+
+                                <div class="tbl_wrap">
+                                    <table class="mt_tbl" id="table">
+                                        <colgroup>
+                                            <col style="width: 10%;">
+                                            <col style="width: 15%;">
+                                            <col style="width: auto;">
+                                            <col style="width: 15%;">
+                                            <col style="width: 20%;">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th><div>No</div></th>
+                                                <th><div class="sort_col">조</div></th>
+                                                <th><div>제출시간</div></th>
+                                                <th><div class="sort_col">의견갯수</div></th>
+                                                <th><div class="sort_col">평가여부</div></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><div>1</div></td>
+                                                <td><div>1조</div></td>
+                                                <td><div>10/25 10:13</div></td>
+                                                <td><div><a href="./m4_2_2_step3.html">7</a></div></td>
+                                                <td><div><a href="./m4_2_2_step3.html">미평가</a></div></td>
+                                            </tr>
+                                            <tr>
+                                                <td><div>2</div></td>
+                                                <td><div>2조</div></td>
+                                                <td><div>10/25 10:11</div></td>
+                                                <td><div><a href="./m4_2_2_step3.html">5</a></div></td>
+                                                <td><div><a href="./m4_2_2_step3.html">미평가</a></div></td>
+                                            </tr>
+                                            <tr>
+                                                <td><div>3</div></td>
+                                                <td><div>3조</div></td>
+                                                <td><div>10/25 10:12</div></td>
+                                                <td><div><a href="./m4_2_2_step3.html">4</a></div></td>
+                                                <td><div><a href="./m4_2_2_step3.html">미평가</a></div></td>
+                                            </tr>
+                                            <tr>
+                                                <td><div>4</div></td>
+                                                <td><div>4조</div></td>
+                                                <td><div>10/25 10:14</div></td>
+                                                <td><div><a href="./m4_2_2_step3.html">4</a></div></td>
+                                                <td><div><a href="./m4_2_2_step3.html">미평가</a></div></td>
+                                            </tr>
+                                            <tr>
+                                                <td><div>5</div></td>
+                                                <td><div>5조</div></td>
+                                                <td><div>10/25 10:15</div></td>
+                                                <td><div><a href="./m4_2_2_step3.html">4</a></div></td>
+                                                <td><div><a href="./m4_2_2_step3.html">미평가</a></div></td>
+                                            </tr>
+                                            <tr>
+                                                <td><div>6</div></td>
+                                                <td><div>6조</div></td>
+                                                <td><div>10/25 10:16</div></td>
+                                                <td><div><a href="./m4_2_2_step3.html">4</a></div></td>
+                                                <td><div><a href="./m4_2_2_step3.html">평가</a></div></td>
+                                            </tr>
+                                            <tr>
+                                                <td><div>7</div></td>
+                                                <td><div>7조</div></td>
+                                                <td><div>10/25 10:11</div></td>
+                                                <td><div><a href="./m4_2_2_step3.html">4</a></div></td>
+                                                <td><div><a href="./m4_2_2_step3.html">평가</a></div></td>
+                                            </tr>
+                                            <tr>
+                                                <td><div>8</div></td>
+                                                <td><div>8조</div></td>
+                                                <td><div>10/25 10:12</div></td>
+                                                <td><div><a href="./m4_2_2_step3.html">4</a></div></td>
+                                                <td><div><a href="./m4_2_2_step3.html">평가</a></div></td>
+                                            </tr>
+                                            <tr>
+                                                <td><div>9</div></td>
+                                                <td><div>9조</div></td>
+                                                <td><div>10/25 10:14</div></td>
+                                                <td><div><a href="./m4_2_2_step3.html">4</a></div></td>
+                                                <td><div><a href="./m4_2_2_step3.html">평가</a></div></td>
+                                            </tr>
+                                            <tr>
+                                                <td><div>10</div></td>
+                                                <td><div>10조</div></td>
+                                                <td><div>10/25 10:11</div></td>
+                                                <td><div><a href="./m4_2_2_step3.html">4</a></div></td>
+                                                <td><div><a href="./m4_2_2_step3.html">평가</a></div></td>
+                                            </tr>
+                                            <tr>
+                                                <td><div>11</div></td>
+                                                <td><div>11조</div></td>
+                                                <td><div>미제출</div></td>
+                                                <td><div><a href="./m4_2_2_step3.html">4</a></div></td>
+                                                <td><div><a href="./m4_2_2_step3.html">평가</a></div></td>
+                                            </tr>
+                                            <tr>
+                                                <td><div>12</div></td>
+                                                <td><div>12조</div></td>
+                                                <td><div>미제출</div></td>
+                                                <td><div><a href="./m4_2_2_step3.html">4</a></div></td>
+                                                <td><div><a href="./m4_2_2_step3.html">평가</a></div></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="btn_box">
+                                    <div class="btn file_submit"><a href="./m4_2_2_step1.html">문제 목록으로 이동</a></div>
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                    <!-- //main_cont -->
+                </div>
+            </section>
+        </div>
+        <!-- //container -->
+    
+        <div id="finPop" class="ly_pop">
+            <div class="ly_inner">
+                <div class="modal_cont">
+                    <div class="ly_hd">
+                        <div class="tit">결과 확인</div>
+                        <div class="ly_close_btn" onclick="closePopup('finPop')"><span class="sound_only">닫기</span><i class="icon close"></i></div>
+                    </div>
+                    <div class="ly_bd">
+                        <div class="bd_cont">
+                            
+                            <div class="tbl_wrap">
+                                <table class="mt_tbl non_mt result_ly_tbl">
+                                    <colgroup>
+                                        <col style="width:15%;">
+                                        <col style="width: auto;">
+                                        <col style="width:15%;">
+                                        <col style="width:30%;">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th><div>문제</div></th>
+                                            <td class="ta_l" colspan="3">
+                                                <div>1번문제</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><div>동료평가</div></th>
+                                            <td class="ta_l" colspan="3">
+                                                <div>2.8점 (총획득 <span>20</span> 점)</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><div>교사평가</div></th>
+                                            <td class="ta_l" colspan="3">
+                                                <div>3점</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="total_num">
+                                            <th><div>최종점수</div></th>
+                                            <td class="ta_l" colspan="3">
+                                                <div>5.8점</div>
+                                            </td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="finPop2" class="ly_pop">
+            <div class="ly_inner">
+                <div class="modal_cont">
+                    <div class="ly_hd">
+                        <div class="tit">결과 확인</div>
+                        <div class="ly_close_btn" onclick="closePopup('finPop2')"><span class="sound_only">닫기</span><i class="icon close"></i></div>
+                    </div>
+                    <div class="ly_bd">
+                        <div class="bd_cont">
+                            
+                            <div class="tbl_wrap">
+                                <table class="mt_tbl non_mt result_ly_tbl">
+                                    <colgroup>
+                                        <col style="width:15%;">
+                                        <col style="width: auto;">
+                                        <col style="width:15%;">
+                                        <col style="width:30%;">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th><div>문제</div></th>
+                                            <td class="ta_l" colspan="3">
+                                                <div>1번문제</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><div>동료평가</div></th>
+                                            <td class="ta_l" colspan="3">
+                                                <div>2.8점 (총획득 <span>20</span> 점)</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><div>교사평가</div></th>
+                                            <td class="ta_l" colspan="3">
+                                                <div>3점</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="total_num">
+                                            <th><div>최종점수</div></th>
+                                            <td class="ta_l" colspan="3">
+                                                <div>5.8점</div>
+                                            </td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="lyDim" onclick="closePopupOnDimClick()"></div>
+
+        
+        <!-- footer -->
+        <footer id="footer" class="type_gray">
+            <div class="ft_inner">
+                <div class="left">
+                    <h1 class="logo"><a href="/"><img src="../../resources/img/common/logo.svg" alt=""><span class="sound_only">소크라테스 교실</span></a></h1>
+                    <div class="copyright">COPYRIGHT (C)2023 Technology-Based Active Learning., <br class="mo_only">All Rights Reserved.</div>
+                </div>
+                <div class="terms_box">
+                    <ul>
+                        <li><a href="#none">Terms of Service</a></li>
+                        <li><a href="#none">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- //footer -->
+    </div>
+
+    <script>
+        
+    </script>
+</body>
+</html>

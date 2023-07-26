@@ -1,0 +1,16 @@
+<svg id="ic_company" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_27392" data-name="사각형 27392" width="9.002" height="10.468" transform="translate(0 0.001)" fill="none"/>
+    </clipPath>
+  </defs>
+  <path id="패스_204" data-name="패스 204" d="M0,0H16V16H0Z" fill="none"/>
+  <g id="그룹_841" data-name="그룹 841" transform="translate(3.499 2.765)">
+    <g id="그룹_840" data-name="그룹 840" clip-path="url(#clip-path)">
+      <rect id="사각형_27388" data-name="사각형 27388" width="1.501" height="8.002" transform="translate(0.5 1.967)" fill="none" stroke="#231815" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <rect id="사각형_27389" data-name="사각형 27389" width="1.501" height="8.002" transform="translate(7.001 1.967)" fill="none" stroke="#231815" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <rect id="사각형_27390" data-name="사각형 27390" width="5" height="9.469" transform="translate(2.001 0.5)" fill="none" stroke="#231815" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <rect id="사각형_27391" data-name="사각형 27391" width="1.902" height="2.608" transform="translate(3.55 7.358)" fill="none" stroke="#231815" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

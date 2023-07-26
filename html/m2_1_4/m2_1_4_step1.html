@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>학습활동 || 팀별 괄호 맞추기 step2</title>
+    <link rel="stylesheet" href="../../resources/css/common.css">
+    <link rel="stylesheet" href="../../resources/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../../resources/css/content.css">
+    <script src="../../resources/js/jquery-3.6.1.min.js"></script>
+    <script src="../../resources/js/swiper-bundle.min.js"></script>
+    <script src="../../resources/js/ui.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <header id="header">
+            <div class="hd_inner">
+                <!-- <div id="ham_btn"><div class="line_box"></div></div> -->
+                <div class="hd_left">
+                    <h1 class="logo"><a href="/"><img src="../../resources/img/common/logo.svg" alt=""><span class="sound_only">소크라테스 교실</span></a></h1>
+                    <div class="menu">
+                        <div class="subject">국어</div>
+                        <div class="class"><span class="grade_sta">3</span>학년 <span class="class_sta">3</span>반</div>
+                        <div class="lesson">(<span class="date_sta">수</span>) <span class="lesson_sta">2,3</span>교시</div>
+                    </div>
+                </div>
+                <div class="util is_login">
+                    <!-- 로그링 -->
+                    <div class="member_zone">
+                        <div id="user_menu_btn" class="profile">
+                            <div class="user_infor">
+                                <span class="user_thumb"><img src="../../resources/img/common/user_thumb.svg" alt="유저프로필 이미지"></span>
+                                <span class="user_name"><span class="name_sta">홍길동</span>님</span>
+                            </div>
+                            <i class="icon arrow arrow_d"></i>
+                        </div>
+                        <div class="menu_box">
+                            <ul class="user_menu">
+                                <li><a href="./login.html">로그인</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- //로그인 -->
+                </div>
+            </div>
+        </header>
+        <!-- //header -->
+
+        <!-- container -->
+        <div id="container" class="sub">
+            <!-- intro -->
+            <section class="content_top sub">
+                <div class="inner inner_left">
+                    <div class="card_wrap">
+                        <ul class="card_list">
+                            <li class="card_item ty1">
+                                <div class="card_inner">
+                                    <div class="item_infor">
+                                        <div class="info_cate">
+                                            <div class="cate_date">1주</div>
+                                            <div class="cate_type indiv">개인</div>
+                                        </div>
+                                        <div class="info_tit">
+                                            <div class="tit"> 
+                                                <span class="tit_cate">[M2-1-4]</span>
+                                                <span class="slash">/</span>
+                                                <span class="tit_name">개인별 받아쓰기</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="btn_box">
+                                        <a href="./m2_1_4_step1.html" class="btn btn_attend active"><i class="icon attend"></i><span class="btn_name">참여</span></a>
+                                        <a href="./m2_1_4_step2.html" class="btn btn_result"><i class="icon result"></i><span class="btn_name">결과</span></a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contents">
+                <div class="inner">
+                    <!-- profile_lnb -->
+                    <nav id="lnb">
+                        <div class="lnb_top" menu-cate="learning">
+                            <div class="top_cont">
+                                <div class="cate">learning</div>
+                                <div class="tit">학습활동</div>
+                            </div>
+                        </div>
+                        <div class="lnb_menu">
+                            <ul class="menu_list">
+                                <li class="menu_item"><a href="../../html/index.html">학습활동</a></li>
+                                <li class="menu_item"><a href="../../html/work_result/work_result_1.html">활동결과</a></li>
+                                <li class="menu_item"><a href="#none">수업안내</a></li>
+                                <li class="menu_item"><a href="#none">공지사항</a></li>
+                                <li class="menu_item"><a href="#none">Q&A</a></li>
+                                <li class="menu_item"><a href="#none">자료실</a></li>
+                                <li class="menu_item"><a href="#none">나기기</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <!-- //profile_lnb -->
+
+                    <!-- main_cont -->
+                    <div id="main">
+                        <div class="step_box"> 
+
+                            <div class="step_tit"><span class="step_sta">Step 1.</span> 잘 듣고, 문장 전체를 입력하시오.</div>
+                            <div class="step_subtit">※ 띄어 쓰기 오류도 오타에 포함되니 정확하게 입력하시오.</div>
+                            <div class="step_cont">
+                                <div class="exam_box type_txtarea">
+                                    <div class="exam_inner">
+                                        <textarea></textarea>
+                                    </div>
+                                </div>
+                                <div class="btn_box">
+                                    <div class="btn exam_fin" onclick="openPopup('submitPop')">제출하기</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //main_cont -->
+                </div>
+            </section>
+        </div>
+        <!-- //container -->
+    
+        <div id="submitPop" class="ly_pop">
+            <div class="ly_inner">
+                <div class="modal_cont">
+                    <div class="ly_hd">
+                        <div class="tit">평가 완료</div>
+                        <div class="ly_close_btn" onclick="closePopup('submitPop')"><span class="sound_only">닫기</span><i class="icon close"></i></div>
+                    </div>
+                    <div class="ly_bd">
+                        <div class="bd_cont">
+                            <div class="sub_tit">
+                                <div class="tit">Step 2</div>
+                                <div class="desc">받아쓰기가 완료되었습니다.</div>
+                            </div>
+                            <div class="result_box">
+                                <div class="box_inner ty2">
+                                    <div class="result_info">
+                                        <div class="info_txt">오타 : <span class="err">3개</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ly_tbl">
+                        <div class="answer_box">
+                            <div class="answer_item">
+                                <div class="box_tit">▶ 정답</div>
+                                <div class="txt_box"><p>이제까지 나는 우리 동네의 예술적 분위기에 대하여 긴 설명을 했다.</p></div>
+                            </div>
+                            <div class="answer_item">
+                                <div class="box_tit">▶ 입력</div>
+                                <div class="txt_box"><p>이제까지 나는 우리 동네의 예술적 분<span class="err">와니기</span>에 대하여 긴 설명을 했다.</p></div>
+                            </div>
+    
+                            <div class="btn_box">
+                                <div class="btn btn_list"><a href="../index.html">목록으로 이동</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="lyDim" onclick="closePopupOnDimClick()"></div>
+
+        <!-- footer -->
+        <footer id="footer" class="type_gray">
+            <div class="ft_inner">
+                <div class="left">
+                    <h1 class="logo"><a href="/"><img src="../../resources/img/common/logo.svg" alt=""><span class="sound_only">소크라테스 교실</span></a></h1>
+                    <div class="copyright">COPYRIGHT (C)2023 Technology-Based Active Learning., <br class="mo_only">All Rights Reserved.</div>
+                </div>
+                <div class="terms_box">
+                    <ul>
+                        <li><a href="#none">Terms of Service</a></li>
+                        <li><a href="#none">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+</html>

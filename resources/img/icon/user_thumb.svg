@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24.085" height="23.365" viewBox="0 0 24.085 23.365">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="패스_229" data-name="패스 229" d="M9.043,0,0,3.844v10.4l9.043,3.844V7.687l9.043-3.844Z" fill="none"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.117" y1="0.887" x2="0.136" y2="0.887" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0.997" stop-color="#4864ff"/>
+      <stop offset="1" stop-color="#4864ff"/>
+    </linearGradient>
+  </defs>
+  <g id="그룹_516" data-name="그룹 516" transform="translate(3)">
+    <path id="패스_231" data-name="패스 231" d="M9.042,0,0,2.279H0L9.042,4.559h0l9.043-2.28Z" transform="translate(0 15.806)" fill="#4864ff"/>
+    <g id="그룹_518" data-name="그룹 518" transform="translate(0 0)">
+      <g id="그룹_517" data-name="그룹 517">
+        <g id="그룹_516-2" data-name="그룹 516" clip-path="url(#clip-path)">
+          <rect id="사각형_333" data-name="사각형 333" width="23.593" height="23.593" transform="translate(-6.347 15.483) rotate(-67.709)" fill="url(#linear-gradient)"/>
+        </g>
+      </g>
+      <path id="패스_230" data-name="패스 230" d="M20,12.345v10.4L29.042,18.9V8.5Z" transform="translate(-10.957 -4.658)" fill="#6c88ff"/>
+    </g>
+  </g>
+</svg>

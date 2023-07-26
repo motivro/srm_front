@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>소크라테스 교실 || 학습활동</title>
+    <link rel="stylesheet" href="../../resources/css/common.css">
+    <link rel="stylesheet" href="../../resources/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../../resources/css/content.css">
+    <script src="../../resources/js/jquery-3.6.1.min.js"></script>
+    <script src="../../resources/js/swiper-bundle.min.js"></script>
+    <script src="../../resources/js/ui.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <header id="header">
+            <div class="hd_inner">
+                <!-- <div id="ham_btn"><div class="line_box"></div></div> -->
+                <div class="hd_left">
+                    <h1 class="logo"><a href="/"><img src="../../resources/img/common/logo.svg" alt=""><span class="sound_only">소크라테스 교실</span></a></h1>
+                    <div class="menu">
+                        <div class="subject">국어</div>
+                        <div class="class"><span class="grade_sta">3</span>학년 <span class="class_sta">3</span>반</div>
+                        <div class="lesson">(<span class="date_sta">수</span>) <span class="lesson_sta">2,3</span>교시</div>
+                    </div>
+                </div>
+                <div class="util is_login">
+                    <!-- 로그링 -->
+                    <div class="member_zone">
+                        <div id="user_menu_btn" class="profile">
+                            <div class="user_infor">
+                                <span class="user_thumb"><img src="../../resources/img/common/user_thumb.svg" alt="유저프로필 이미지"></span>
+                                <span class="user_name"><span class="name_sta">교사이름</span></span>
+                            </div>
+                            <i class="icon arrow arrow_d"></i>
+                        </div>
+                        <div class="menu_box">
+                            <ul class="user_menu">
+                                <li><a href="./login.html">로그인</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- //로그인 -->
+                </div>
+            </div>
+        </header>
+        <!-- //header -->
+
+        <!-- container -->
+        <div id="container">
+            <!-- intro -->
+            <section class="content_top">
+                <div class="inner inner_left">
+                    <nav id="menuTab">
+                        <ul class="tab_list">
+                            <li class="tab_item "><a href="./work_result_1.html">포인트</a></li>
+                            <li class="tab_item selected"><a href="./work_result_2.html">참여활동별</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </section>
+
+            <section id="contents">
+                <div class="inner">
+                    <!-- profile_lnb -->
+                    <nav id="lnb">
+                        <div class="lnb_top" menu-cate="learning">
+                            <div class="top_cont">
+                                <div class="cate">learning</div>
+                                <div class="tit">학습활동</div>
+                            </div>
+                        </div>
+                        <div class="lnb_menu">
+                            <ul class="menu_list">
+                                <li class="menu_item"><a href="../../html/index.html">학습활동</a></li>
+                                <li class="menu_item"><a href="../../html/work_result/work_result_1.html">활동결과</a></li>
+                                <li class="menu_item"><a href="#none">수업안내</a></li>
+                                <li class="menu_item"><a href="#none">공지사항</a></li>
+                                <li class="menu_item"><a href="#none">Q&A</a></li>
+                                <li class="menu_item"><a href="#none">자료실</a></li>
+                                <li class="menu_item"><a href="#none">조편성</a></li>
+                                <li class="menu_item"><a href="#none">학생관리</a></li>
+                                <li class="menu_item"><a href="#none">나기기</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <!-- //profile_lnb -->
+
+                    <!-- main_cont -->
+                    <div id="main">
+                        <div class="step_box teacher">
+                            <div class="tbl_wrap">
+                                <div class="tbl_tit">활동결과</div>
+                                <div class="select_wrap">
+                                    <select name="activity" id="activitySelect">
+                                        <option value="학습활동을 선택해주세요.">학습활동을 선택해주세요.</option>
+                                        <option value="[M4-1-2]조별 주관식 문제 풀이">[M4-1-2]조별 주관식 문제 풀이</option>
+                                    </select>
+                                </div>
+                                <div class="tbl_tit row_1">
+                                    <div class="btn btn_exel"><a href="#none">엑셀 다운로드</a></div>
+                                </div>
+                                <table class="mt_tbl type2" id="table">
+                                    <thead>
+                                        <tr>
+                                            <th rowspan="2"><div>No</div></th>
+                                            <th rowspan="2"><div class="sort_col">참여</div></th>
+                                            <th rowspan="2"><div>참여횟수</div></th>
+                                            <th rowspan="2"><div>평가횟수</div></th>
+                                            <th rowspan="2"><div>의견작성</div></th>
+                                            <th colspan="5"><div>획득 포인트</div></th>
+                                        </tr>
+                                        <tr>
+                                            <th><div>동료</div></th>
+                                            <th><div>교사</div></th>
+                                            <th><div>시스템</div></th>
+                                            <th><div>경고카드</div></th>
+                                            <th><div>소계</div></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><div>1</div></td>
+                                            <td><div><a href="#none">이루다(30501)</a></div></td>
+                                            <td><div>1</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>3</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>3</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div>2</div></td>
+                                            <td><div><a href="#none">황지우(30502)</a></div></td>
+                                            <td><div>1</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>2</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>2</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div>3</div></td>
+                                            <td><div><a href="#none">이연제(30503)</a></div></td>
+                                            <td><div>1</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>2</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>2</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div>4</div></td>
+                                            <td><div><a href="#none">한정민(30504)</a></div></td>
+                                            <td><div>1</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>1</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>1</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div>5</div></td>
+                                            <td><div><a href="#none">안준서(30505)</a></div></td>
+                                            <td><div>1</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>2</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>2</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div>6</div></td>
+                                            <td><div><a href="#none">선민아(30506)</a></div></td>
+                                            <td><div>1</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>2</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>2</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div>7</div></td>
+                                            <td><div><a href="#none">안준서(30507)</a></div></td>
+                                            <td><div>1</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>2</div></td>
+                                            <td><div>1</div></td>
+                                            <td><div>1</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div>8</div></td>
+                                            <td><div><a href="#none">고도윤(30508)</a></div></td>
+                                            <td><div>1</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>2</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>2</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div>9</div></td>
+                                            <td><div><a href="#none">김시윤(30509)</a></div></td>
+                                            <td><div>1</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>2</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>2</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div>10</div></td>
+                                            <td><div><a href="#none">권하준(30510)</a></div></td>
+                                            <td><div>1</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>2</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>2</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div>11</div></td>
+                                            <td><div><a href="#none">송준(30511)</a></div></td>
+                                            <td><div>1</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>1</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>1</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div>12</div></td>
+                                            <td><div><a href="#none">김규빈(30512)</a></div></td>
+                                            <td><div>1</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>1</div></td>
+                                            <td><div>0</div></td>
+                                            <td><div>1</div></td>
+                                        </tr>
+                                    </tbody>
+
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //main_cont -->
+                </div>
+            </section>
+        </div>
+        <!-- //container -->
+
+        <!-- footer -->
+        <footer id="footer" class="type_gray">
+            <div class="ft_inner">
+                <div class="left">
+                    <h1 class="logo"><a href="/"><img src="../../resources/img/common/logo.svg" alt=""><span class="sound_only">소크라테스 교실</span></a></h1>
+                    <div class="copyright">COPYRIGHT (C)2023 Technology-Based Active Learning., <br class="mo_only">All Rights Reserved.</div>
+                </div>
+                <div class="terms_box">
+                    <ul>
+                        <li><a href="#none">Terms of Service</a></li>
+                        <li><a href="#none">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- //footer -->
+    </div>
+    <script>
+        $(document).ready(function(){
+            selectUi2.init();
+            $('#activitySelect').on('change', function() {
+                console.log(222)
+                var selectedValue = $(this).val();
+
+                if (selectedValue === '[M4-1-2]조별 주관식 문제 풀이') {
+                    window.location.href = './work_result_2_1.html';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

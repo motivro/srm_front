@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>학습활동 || 팀별 괄호 맞추기 step2</title>
+    <link rel="stylesheet" href="../../resources/css/common.css">
+    <link rel="stylesheet" href="../../resources/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../../resources/css/content.css">
+    <script src="../../resources/js/jquery-3.6.1.min.js"></script>
+    <script src="../../resources/js/swiper-bundle.min.js"></script>
+    <script src="../../resources/js/ui.js"></script>
+
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <header id="header">
+            <div class="hd_inner">
+                <!-- <div id="ham_btn"><div class="line_box"></div></div> -->
+                <div class="hd_left">
+                    <h1 class="logo"><a href="/"><img src="../../resources/img/common/logo.svg" alt=""><span class="sound_only">소크라테스 교실</span></a></h1>
+                    <div class="menu">
+                        <div class="subject">국어</div>
+                        <div class="class"><span class="grade_sta">3</span>학년 <span class="class_sta">3</span>반</div>
+                        <div class="lesson">(<span class="date_sta">수</span>) <span class="lesson_sta">2,3</span>교시</div>
+                    </div>
+                </div>
+                <div class="util is_login">
+                    <!-- 로그링 -->
+                    <div class="member_zone">
+                        <div id="user_menu_btn" class="profile">
+                            <div class="user_infor">
+                                <span class="user_thumb"><img src="../../resources/img/common/user_thumb.svg" alt="유저프로필 이미지"></span>
+                                <span class="user_name"><span class="name_sta">홍길동</span>님</span>
+                            </div>
+                            <i class="icon arrow arrow_d"></i>
+                        </div>
+                        <div class="menu_box">
+                            <ul class="user_menu">
+                                <li><a href="./login.html">로그인</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- //로그인 -->
+                </div>
+            </div>
+        </header>
+        <!-- //header -->
+
+        <!-- container -->
+        <div id="container" class="sub">
+            <!-- intro -->
+            <section class="content_top sub">
+                <div class="inner inner_left">
+                    <div class="card_wrap">
+                        <ul class="card_list">
+                            <li class="card_item ty1">
+                                <div class="card_inner">
+                                    <div class="item_infor">
+                                        <div class="info_cate">
+                                            <div class="cate_date">4주</div>
+                                            <div class="cate_type indiv">개인</div>
+                                        </div>
+                                        <div class="info_tit">
+                                            <div class="tit"> 
+                                                <span class="tit_cate">[M4-1-2]</span>
+                                                <span class="slash">/</span>
+                                                <span class="tit_name">개인별 객관식 문제 풀이</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="btn_box">
+                                        <a href="./m4_1_2_step0.html" class="btn btn_attend "><i class="icon attend"></i><span class="btn_name">참여</span></a>
+                                        <a href="./m4_1_2_step3.html" class="btn btn_result active"><i class="icon result"></i><span class="btn_name">결과</span></a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contents">
+                <div class="inner">
+                    <!-- profile_lnb -->
+                    <nav id="lnb">
+                        <div class="lnb_top" menu-cate="learning">
+                            <div class="top_cont">
+                                <div class="cate">learning</div>
+                                <div class="tit">학습활동</div>
+                            </div>
+                        </div>
+                        <div class="lnb_menu">
+                            <ul class="menu_list">
+                                <li class="menu_item"><a href="../../html/index.html">학습활동</a></li>
+                                <li class="menu_item"><a href="../../html/work_result/work_result_1.html">활동결과</a></li>
+                                <li class="menu_item"><a href="#none">수업안내</a></li>
+                                <li class="menu_item"><a href="#none">공지사항</a></li>
+                                <li class="menu_item"><a href="#none">Q&A</a></li>
+                                <li class="menu_item"><a href="#none">자료실</a></li>
+                                <li class="menu_item"><a href="#none">조편성</a></li>
+                                <li class="menu_item"><a href="#none">학생관리</a></li>
+                                <li class="menu_item"><a href="#none">나기기</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <!-- //profile_lnb -->
+
+                    <!-- main_cont -->
+                    <div id="main">
+                        <div class="step_box">
+                            
+                            <div class="step_cont">
+                                <div class="step_tit">활동결과(교사)</div>
+
+                                <ul class="step_progress">
+                                    <li class="step_item">
+                                        <div class="step_now"><a href="./m4_1_2_step3.html">문제별</a></div>
+                                    </li>
+                                    <li class="step_item active">
+                                        <div class="step_now"><a href="./m4_1_2_step4.html">학생별</a></div>
+                                    </li>
+                                </ul>
+
+                                <div class="btn_box top_filter">
+                                    <div class="btn_refresh small"><i class="icon refresh"></i></div>
+                                </div>
+                                <div class="tbl_wrap">
+                                    <table class="mt_tbl type2" id="table">
+                                        <colgroup>
+                                            <col style="width: 8%;">
+                                            <col style="width: 16%;">
+                                            <col style="width: 14%;">
+                                            <col style="width: 10%;">
+                                            <col style="width: 10%;">
+                                            <col style="width: 10%;">
+                                            <col style="width: 32%;">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th rowspan="2" class="first"><div>No</div></th>
+                                                <th rowspan="2"><div class="sort_col">이름</div></th>
+                                                <th colspan="2"><div>제출횟수</div></th>
+                                                <th rowspan="2"><div class="sort_col">정답</div></th>
+                                                <th rowspan="2"><div>점수</div></th>
+                                                <th rowspan="2" class="right"><div>그래프</div></th>
+                                            </tr>
+                                            <tr>
+                                                <th><div>1차</div></th>
+                                                <th><div>2차</div></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><div>1</div></td>
+                                                <td><div class="user_name" onclick="openPopup('finPop')"><i class="icon rating"></i><span class="name_sta">이루다(30501)</span></div></td>
+                                                <td><div>10/10</div></td>
+                                                <td><div>10/10</div></td>
+                                                <td><div>3</div></td>
+                                                <td><div>3</div></td>
+                                                <td class="ta_l">
+                                                    <div class="graph">
+                                                        <div class="progress">
+                                                            <span class="bar" style="width: 100%;"></span>
+                                                            <span class="percent">100%</span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><div>2</div></td>
+                                                <td><div class="user_name" onclick="openPopup('finPop')"><i class="icon rating"></i><span class="name_sta">황지우(30502)</span></div></td>
+                                                <td><div>10/10</div></td>
+                                                <td><div>10/10</div></td>
+                                                <td><div>4</div></td>
+                                                <td><div>4</div></td>
+                                                <td class="ta_l">
+                                                    <div class="graph">
+                                                        <div class="progress">
+                                                            <span class="bar" style="width: 100%;"></span>
+                                                            <span class="percent">100%</span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><div>3</div></td>
+                                                <td><div class="user_name" onclick="openPopup('finPop')"><i class="icon rating"></i><span class="name_sta">이연제(30503)</span></div></td>
+                                                <td><div>10/10</div></td>
+                                                <td><div>10/10</div></td>
+                                                <td><div>5</div></td>
+                                                <td><div>5</div></td>
+                                                <td class="ta_l">
+                                                    <div class="graph">
+                                                        <div class="progress">
+                                                            <span class="bar" style="width: 100%;"></span>
+                                                            <span class="percent">100%</span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><div>4</div></td>
+                                                <td><div class="user_name" onclick="openPopup('finPop')"><i class="icon rating"></i><span class="name_sta">한정민(30504)</span></div></td>
+                                                <td><div>10/10</div></td>
+                                                <td><div>10/10</div></td>
+                                                <td><div>9</div></td>
+                                                <td><div>12</div></td>
+                                                <td class="ta_l">
+                                                    <div class="graph">
+                                                        <div class="progress">
+                                                            <span class="bar" style="width: 100%;"></span>
+                                                            <span class="percent">100%</span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><div>5</div></td>
+                                                <td><div class="user_name" onclick="openPopup('finPop')"><i class="icon rating"></i><span class="name_sta">안준서(30505)</span></div></td>
+                                                <td><div>10/10</div></td>
+                                                <td><div>10/10</div></td>
+                                                <td><div>7</div></td>
+                                                <td><div>11</div></td>
+                                                <td class="ta_l">
+                                                    <div class="graph">
+                                                        <div class="progress">
+                                                            <span class="bar" style="width: 100%;"></span>
+                                                            <span class="percent">100%</span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><div>6</div></td>
+                                                <td><div class="user_name" onclick="openPopup('finPop')"><i class="icon rating"></i><span class="name_sta">선민아(30506)</span></div></td>
+                                                <td><div>10/10</div></td>
+                                                <td><div>10/10</div></td>
+                                                <td><div>8</div></td>
+                                                <td><div>12</div></td>
+                                                <td class="ta_l">
+                                                    <div class="graph">
+                                                        <div class="progress">
+                                                            <span class="bar" style="width: 100%;"></span>
+                                                            <span class="percent">100%</span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><div>7</div></td>
+                                                <td><div class="user_name" onclick="openPopup('finPop')"><i class="icon rating"></i><span class="name_sta">안창남(30507)</span></div></td>
+                                                <td><div>10/10</div></td>
+                                                <td><div>10/10</div></td>
+                                                <td><div>10</div></td>
+                                                <td><div>15</div></td>
+                                                <td class="ta_l">
+                                                    <div class="graph">
+                                                        <div class="progress">
+                                                            <span class="bar" style="width: 100%;"></span>
+                                                            <span class="percent">100%</span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><div>8</div></td>
+                                                <td><div class="user_name" onclick="openPopup('finPop')"><i class="icon rating"></i><span class="name_sta">고도윤(30508)</span></div></td>
+                                                <td><div>10/10</div></td>
+                                                <td><div>10/10</div></td>
+                                                <td><div>3</div></td>
+                                                <td><div>2</div></td>
+                                                <td class="ta_l">
+                                                    <div class="graph">
+                                                        <div class="progress">
+                                                            <span class="bar" style="width: 100%;"></span>
+                                                            <span class="percent">100%</span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><div>9</div></td>
+                                                <td><div class="user_name" onclick="openPopup('finPop')"><i class="icon rating"></i><span class="name_sta">김시윤(30509)</span></div></td>
+                                                <td><div>10/10</div></td>
+                                                <td><div>10/10</div></td>
+                                                <td><div>7</div></td>
+                                                <td><div>10</div></td>
+                                                <td class="ta_l">
+                                                    <div class="graph">
+                                                        <div class="progress">
+                                                            <span class="bar" style="width: 100%;"></span>
+                                                            <span class="percent">100%</span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><div>10</div></td>
+                                                <td><div class="user_name" onclick="openPopup('finPop')"><i class="icon rating"></i><span class="name_sta">권하준(30510)</span></div></td>
+                                                <td><div>10/10</div></td>
+                                                <td><div>10/10</div></td>
+                                                <td><div>2</div></td>
+                                                <td><div>3</div></td>
+                                                <td class="ta_l">
+                                                    <div class="graph">
+                                                        <div class="progress">
+                                                            <span class="bar" style="width: 100%;"></span>
+                                                            <span class="percent">100%</span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><div>11</div></td>
+                                                <td><div class="user_name" onclick="openPopup('finPop')"><i class="icon rating"></i><span class="name_sta">송준(30511)</span></div></td>
+                                                <td><div>10/10</div></td>
+                                                <td><div>10/10</div></td>
+                                                <td><div>3</div></td>
+                                                <td><div>4</div></td>
+                                                <td class="ta_l">
+                                                    <div class="graph">
+                                                        <div class="progress">
+                                                            <span class="bar" style="width: 100%;"></span>
+                                                            <span class="percent">100%</span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><div>12</div></td>
+                                                <td><div class="user_name" onclick="openPopup('finPop')"><i class="icon rating"></i><span class="name_sta">김규빈(30512)</span></div></td>
+                                                <td><div>0/10</div></td>
+                                                <td><div>0/10</div></td>
+                                                <td><div>0</div></td>
+                                                <td><div>0</div></td>
+                                                <td class="ta_l">
+                                                    <div class="graph">
+                                                        <div class="progress">
+                                                            <span class="bar" style="width: 100%;"></span>
+                                                            <span class="percent">100%</span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                    <!-- //main_cont -->
+                </div>
+            </section>
+        </div>
+        <!-- //container -->
+    
+        <div id="finPop" class="ly_pop">
+            <div class="ly_inner">
+                <div class="modal_cont">
+                    <div class="ly_hd">
+                        <div class="tit">개인별 상세현황</div>
+                        <div class="ly_close_btn" onclick="closePopup('finPop')"><span class="sound_only">닫기</span><i class="icon close"></i></div>
+                    </div>
+                    <div class="ly_bd">
+                        <div class="bd_cont">
+                            
+                            <div class="tbl_wrap">
+                                <table class="mt_tbl non_mt">
+                                    <colgroup>
+                                        <col style="width: auto;">
+                                        <col style="width: 20%;">
+                                        <col style="width: 20%;">
+                                        <col style="width: 20%;">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th><div>문제</div></th>
+                                            <th><div>1차</div></th>
+                                            <th><div>2차</div></th>
+                                            <th><div>정답</div></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><div><a href="#">1번문제</a></div></td>
+                                            <td><div>7/25 01:11</div></td>
+                                            <td><div>7/25 01:28</div></td>
+                                            <td><div>O</div></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><div><a href="#">2번문제</a></div></td>
+                                            <td><div>7/25 01:10</div></td>
+                                            <td><div>7/25 01:28</div></td>
+                                            <td><div>O</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div><a href="#">3번문제</a></div></td>
+                                            <td><div>7/25 01:10</div></td>
+                                            <td><div>7/25 01:28</div></td>
+                                            <td><div></div></td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="lyDim" onclick="closePopupOnDimClick()"></div>
+
+        
+        <!-- footer -->
+        <footer id="footer" class="type_gray">
+            <div class="ft_inner">
+                <div class="left">
+                    <h1 class="logo"><a href="/"><img src="../../resources/img/common/logo.svg" alt=""><span class="sound_only">소크라테스 교실</span></a></h1>
+                    <div class="copyright">COPYRIGHT (C)2023 Technology-Based Active Learning., <br class="mo_only">All Rights Reserved.</div>
+                </div>
+                <div class="terms_box">
+                    <ul>
+                        <li><a href="#none">Terms of Service</a></li>
+                        <li><a href="#none">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+</html>
