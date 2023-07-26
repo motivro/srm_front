@@ -178,7 +178,6 @@ body.no-scroll{overflow: hidden;}
 
 #lnb .lnb_top .top_cont{display:none}
 
-#lnb .lnb_top
 /* menuTab */
 #menuTab{margin-bottom:-1px;}
 #menuTab .tab_list{width: 100%;display: flex;justify-content:flex-start;flex-wrap: nowrap;}
