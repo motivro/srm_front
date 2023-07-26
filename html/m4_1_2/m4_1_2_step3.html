@@ -131,16 +131,16 @@
                                     </ul>
     
                                     <div class="question_num_wrap">
-                                        <div class="active">1번</div>
-                                        <div>2번</div>
-                                        <div>3번</div>
-                                        <div>4번</div>
-                                        <div>5번</div>
-                                        <div>6번</div>
-                                        <div>7번</div>
-                                        <div>8번</div>
-                                        <div>9번</div>
-                                        <div>10번</div>
+                                        <div q_num="1" class="active">1번</div>
+                                        <div q_num="2">2번</div>
+                                        <div q_num="3">3번</div>
+                                        <div q_num="4">4번</div>
+                                        <div q_num="5">5번</div>
+                                        <div q_num="6">6번</div>
+                                        <div q_num="7">7번</div>
+                                        <div q_num="8">8번</div>
+                                        <div q_num="9">9번</div>
+                                        <div q_num="10">10번</div>
                                     </div>
 
                                     <table class="mt_tbl question_add_tbl">
@@ -152,10 +152,10 @@
                                         </colgroup>
                                         <tbody>
                                             <tr>
-                                                <th><div>문제1.</div></th>
+                                                <th><div class="qqq_name">문제 1.</div></th>
                                                 <td class="ta_l" colspan="3">
                                                     <div class="q_a_title">
-                                                        <div class="ti">( <span class="partic">24명 참여</span>  / <span class="non_partic">2명</span> 미참여 )</div>
+                                                        <div class="ti">( <span class="partic">24 명 참여</span>  / <span class="non_partic">2 명</span> 미참여 )</div>
                                                         <div class="s_ti">시를 읽고 해석하는 방법에 속하지 않는 것은？</div>
                                                     </div>
                                                 </td>
@@ -398,6 +398,42 @@
 
     <script>
         
+        $(document).ready(function() {
+    var data = [
+        {number: 1,participants: [24,2], question: '1번문제 시를 읽고 해석하는 방법에 속하지 않는 것은？'},
+        {number: 2,participants: [22,4], question: '2번문제 시를 읽고 해석하는 방법에 속하지 않는 것은？'},
+        {number: 3,participants: [20,6], question: '3번문제 시를 읽고 해석하는 방법에 속하지 않는 것은？'},
+        {number: 4,participants: [24,2], question: '4번문제 시를 읽고 해석하는 방법에 속하지 않는 것은？'},
+        {number: 5,participants: [22,4], question: '5번문제 시를 읽고 해석하는 방법에 속하지 않는 것은？'},
+        {number: 6,participants: [20,6], question: '6번문제 시를 읽고 해석하는 방법에 속하지 않는 것은？'},
+        {number: 7,participants: [24,2], question: '7번문제 시를 읽고 해석하는 방법에 속하지 않는 것은？'},
+        {number: 8,participants: [22,4], question: '8번문제 시를 읽고 해석하는 방법에 속하지 않는 것은？'},
+        {number: 9,participants: [20,6], question: '9번문제 시를 읽고 해석하는 방법에 속하지 않는 것은？'},
+        {number: 10,participants: [24,2], question: '10번문제 시를 읽고 해석하는 방법에 속하지 않는 것은？'},
+    ]
+
+    $('.question_num_wrap > div').click(function() {
+        // 클릭된 div의 q_num 속성 값을 가져옵니다.
+        var q_num = $(this).attr('q_num');
+
+        if(!$(this).hasClass('active')){
+            $('.question_num_wrap > div').removeClass('active');
+            $(this).addClass('active');
+        } 
+        // q_num 값에 해당하는 데이터를 찾습니다.
+        var selectedData = data.find(function(item) {
+            return item.number == q_num;
+        });
+        if (selectedData) {
+            // 참여자 정보와 문제를 화면에 표시합니다.
+            $('.question_add_tbl .q_a_title .partic').text(selectedData.participants[0]+' 명 참여');
+            $('.question_add_tbl .q_a_title .non_partic').text(selectedData.participants[1]+' 명');
+            $('.question_add_tbl .qqq_name').text('문제 '+selectedData.number+'.');
+            $('.question_add_tbl .s_ti').text(selectedData.question);
+        }
+    });
+});
+
     </script>
 </body>
 </html>

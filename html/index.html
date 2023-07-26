@@ -13,7 +13,7 @@
     <script src="../resources/js/ui.js"></script>
 </head>
 <body>
-    <div id="wrap">
+    <div id="wrap" class="main">
         <!-- header -->
         <header id="header">
             <div class="hd_inner">
@@ -94,14 +94,14 @@
                     <!-- main_cont -->
                     <div id="main">
                         <div class="session_type">
-                            <div class="cus_inp_box radio_inp type2">
+                            <div class="cus_inp_box radio_inp type2 session_type1">
                                 <label class="label_box" for="ssion_weekend">
                                     <span class="label_name">이번주 활동만 보기</span>
                                     <input type="radio" name="session_type" id="ssion_weekend">
                                     <span class="inp_custom"></span>
                                 </label>
                             </div>
-                            <div class="cus_inp_box radio_inp type2">
+                            <div class="cus_inp_box radio_inp type2 session_type2">
                                 <label class="label_box" for="ssion_all">
                                     <span class="label_name">전체활동 보기</span>
                                     <input type="radio" name="session_type" id="ssion_all" checked>
@@ -110,6 +110,7 @@
                             </div>
 
                         </div>
+                        
 
                         <div class="card_wrap">
                             <ul class="card_list">
@@ -137,7 +138,7 @@
                                     </div>
                                 </li> -->
 
-                                <li class="card_item ty2">
+                                <li class="card_item ty2 card_item_one">
                                     <div class="card_inner">
                                         <div class="item_infor">
                                             <div class="info_cate">
@@ -159,7 +160,7 @@
                                     </div>
                                 </li>
                                 
-                                <li class="card_item ty2">
+                                <li class="card_item ty2 card_item_one">
                                     <div class="card_inner">
                                         <div class="item_infor">
                                             <div class="info_cate">
@@ -368,6 +369,16 @@
 
 <script>
     $(document).ready(function() {
+        $('.cus_inp_box.radio_inp').click(function(){
+            var label_name = $(this).find('.label_name').text();
+            if(label_name == '이번주 활동만 보기'){
+                $('.card_list .card_item').hide();
+                $('.card_item_one').show();
+            } else {
+                $('.card_list .card_item').show();
+            }
+        });
+        
         var $tabItems = $(".tab_item");
         var $cardItems = $(".card_item");
 

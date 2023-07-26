@@ -118,7 +118,7 @@
                                     </div>
                                 </div>
                                 <div class="btn_box">
-                                    <div class="btn exam_fin" onclick="openPopup('submitPop')">제출하기</div>
+                                    <div class="btn exam_fin">제출하기</div>
                                 </div>
                             </div>
                         </div>
@@ -153,13 +153,13 @@
                     </div>
                     <div class="ly_tbl">
                         <div class="answer_box">
-                            <div class="answer_item">
+                            <div class="answer_item answer_data1">
                                 <div class="box_tit">▶ 정답</div>
-                                <div class="txt_box"><p>이제까지 나는 우리 동네의 예술적 분위기에 대하여 긴 설명을 했다.</p></div>
+                                <div class="txt_box"><p></p></div>
                             </div>
-                            <div class="answer_item">
+                            <div class="answer_item answer_data2">
                                 <div class="box_tit">▶ 입력</div>
-                                <div class="txt_box"><p>이제까지 나는 우리 동네의 예술적 분<span class="err">와니기</span>에 대하여 긴 설명을 했다.</p></div>
+                                <div class="txt_box"><p></p></div>
                             </div>
     
                             <div class="btn_box">
@@ -191,43 +191,61 @@
         <!-- //footer -->
 
         <script>
+
+            var data2 = '이제까지 나는 우리 동네의 예술적 분위기에 대하여 긴 설명을 했다.';
+
             $(document).ready(function() {
-    $('.btn_box').click(function() {
-        var userInput = $('#user_answer').val();
-        var standardText = '이제까지 나는 우리 동네의 예술적 분위기에 대하여 긴 설명을 했다.';
+                $('.btn_box').click(function() {
+                    $('.answer_data1 .txt_box p').text("");
+                   $('.answer_data2 .txt_box p').text("");
+                    var data1 = document.getElementById("user_answer").value.trim();
+                    var splitData1 = data1.split(' ');
+                    var splitData2 = data2.split(' ');
+                    var totalDiffChars = 0;
+                    for (var i = 0; i < splitData1.length; i++) {
+                        if (splitData1[i] !== splitData2[i]) {
+                            var result = findDifference(splitData1[i], splitData2[i]);
+                            var originalWord = splitData1[i];
+                            var newWord = originalWord.substring(0, result.startIndex) + "<span  class='err'>" + originalWord.substring(result.startIndex, result.endIndex) + "</span>" + originalWord.substring(result.endIndex);
+                            data1 = data1.replace(splitData1[i], newWord);
+                            totalDiffChars += result.diff.length;
+                        }
+                    }
+                    
+                    
+                    $('.answer_data1 .txt_box p').append(data2);
+                    $('.answer_data2 .txt_box p').append(data1);
+                    if(totalDiffChars > 0){
+                        $('.result_info .info_txt .err').text(totalDiffChars+' 개');
+                    } else {
+                        $('.result_info .info_txt .err').hide();
+                        $('.result_info .info_txt').text('틀린 글자가 없습니다.');
+                    }
+                    openPopup('submitPop');
+                });
+                
+            });
 
-        var wrongWords = '';
-        var wrongChars = '';
+            function findDifference(word1, word2) {
+                var diff = '';
+                var startIndex = 0;
+                var length = word1.length < word2.length ? word1.length : word2.length;
 
-        var splitUserInput = userInput.split(' ');
-        var splitStandardText = standardText.split(' ');
-
-        for (var i = 0; i < splitUserInput.length; i++) {
-            if (splitUserInput[i] !== splitStandardText[i]) {
-                wrongWords = splitUserInput[i];
-                break;
-            }
-        }
-
-        if (wrongWords !== '') {
-            var commonChars = [];
-
-            for (var i = 0; i < splitStandardText[i].length; i++) {
-                if (wrongWords.includes(splitStandardText[i][i])) {
-                    commonChars.push(splitStandardText[i][i]);
+                for (var i = 0; i < length; i++) {
+                    if (word1[i] !== word2[i]) {
+                        startIndex = i;
+                        for (var j = i; j < length; j++) {
+                            if (word1[j] === word2[j]) {
+                                return { diff: diff, startIndex: startIndex, endIndex: j };
+                            }
+                            diff += word1[j];
+                        }
+                        return { diff: diff, startIndex: startIndex, endIndex: length };
+                    }
                 }
-            }
 
-            for (var i = 0; i < wrongWords.length; i++) {
-                if (!commonChars.includes(wrongWords[i])) {
-                    wrongChars += wrongWords[i];
-                }
+                return { diff: word1.length < word2.length ? word2.slice(length) : word1.slice(length), startIndex: length, endIndex: word1.length };
             }
-        }
-
-        alert('잘못된 문자들: ' + wrongChars);
-    });
-});
 
         </script>
     </div>

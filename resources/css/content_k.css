@@ -9,7 +9,7 @@
 .mT40{margin-top:40px!important}
 .bo_t_c{border-top: 1px solid #ccc;}
 
-.mt_tbl tbody th{padding: 10px 12px;font-size: 14px;font-weight: 600;line-height: 18px;color: var(--333);background-color: var(--d9);border-top:solid 1px #ccc}
+.mt_tbl tbody th{padding: 20px 12px;font-size: 16px;font-weight: 600;line-height: 18px;color: var(--333);background-color: var(--d9);border-top:solid 1px #ccc}
 .mt_tbl tbody tr:first-child th{border-top:none}
 .mt_tbl tbody th.vertical_mi{vertical-align: middle;}
 .question_add_tbl.mt_tbl{margin:0}
@@ -76,7 +76,13 @@
 
 .ly_pop.question_add_type .modal_cont{max-width:750px}
 .step_box .step_cont .btn_box.top_filter{justify-content: flex-end;}
-.step_box .step_cont .btn_box.top_filter .btn{width:auto;padding:0 30px;}
+.step_box .step_cont .btn_box.top_filter .btn {
+  width: auto;
+  padding: 0 30px;
+  line-height: 48px!important;
+  height: 48px;
+  font-size: 16px!important;
+}
 
 /* .step_box .step_cont .btn_box.top_filter + .tbl_wrap .mt_tbl{margin-top: 10px;} */
 
@@ -133,7 +139,6 @@
 .step_box .step_cont .btn_box_justify .btn_box{}
 
 .btn_box_justify + .tbl_wrap .mt_tbl{margin-top:10px;}
-.tbl_wrap .tbl_tit.row_2 + .mt_tbl{margin-top:0}
 
 .btn_box_justify.lp_type2{gap: 10px;}
 .result_box .btn_box_justify.lp_type2 .timer{font-size: 24px;}
@@ -153,7 +158,7 @@
 .question_num_wrap > div{font-size:18px;color:#888;font-weight:400;padding:10px;cursor:pointer}
 .question_num_wrap > div.active{font-weight:700;color:#3973b7}
 
-.q_a_title{}
+.q_a_title{line-height:22px;    font-size: 16px;}
 .q_a_title .ti{}
 .q_a_title .ti .partic{color: var(--deep_blue);font-weight: 600;}
 .q_a_title .ti .non_partic{color: var(--red);}
@@ -167,6 +172,8 @@
 
 .step_box .step_cont .btn_box.tbl_top_wrap{justify-content: flex-end;}
 .step_box .step_cont .btn_box.tbl_top_wrap + .tbl_wrap{margin-top:10px;}
+
+
 
 .icon.attend_end {width: 16px;height: 18px;background-image: url(../img/icon/icon_attend_end.svg);background-size: cover;transition: background-image .3s ease;}
 .tbl_wrap .mt_tbl.non_mt{margin:0}
@@ -239,7 +246,12 @@
 .video_exam .rating_box .rating_cont.ty1 .rating_item.good.active > span{color: #fff;}
 
 
+.exam_timer_box .timer_inner {width: auto;max-width: none;justify-content: center!important;}
 
+.step_box.m1_1_1 .step_cont .select_wrap .select_name{font-size:18px!important}
+.step_box .step_cont .btn_box .btn{font-size:24px!important;font-weight:500!important}
 
+.step_box .step_cont .tbl_wrap_w .btn_box .btn{font-size: 18px!important;font-weight: 500!important;height: 50px;line-height: 50px;width: 150px;}
 
+.notice_box p{font-size:16px!important;}
 /* .mt_tbl .user_name .name_sta:after 밑줄 나옴 */
