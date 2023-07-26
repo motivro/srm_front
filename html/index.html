@@ -55,11 +55,11 @@
                 <div class="inner inner_left">
                     <nav id="menuTab">
                         <ul class="tab_list">
-                            <li class="tab_item selected"><a href="./index.html">전체</a></li>
-                            <li class="tab_item"><a href="#none">개인활동</a></li>
-                            <li class="tab_item"><a href="#none">조별활동</a></li>
-                            <li class="tab_item"><a href="#none">그룹활동</a></li>
-                            <li class="tab_item"><a href="#none">팀활동</a></li>
+                            <li class="tab_item selected" data-cate-type="all"><a href="./index.html">전체</a></li>
+                            <li class="tab_item" data-cate-type="개인"><a href="#none">개인활동</a></li>
+                            <li class="tab_item" data-cate-type="조"><a href="#none">조별활동</a></li>
+                            <li class="tab_item" data-cate-type="그룹"><a href="#none">그룹활동</a></li>
+                            <li class="tab_item" data-cate-type="팀"><a href="#none">팀활동</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -77,7 +77,7 @@
                         </div>
                         <div class="lnb_menu">
                             <ul class="menu_list">
-                                <li class="menu_item"><a href="../html/index.html">학습활동</a></li>
+                                <li class="menu_item"><a class="active" href="../html/index.html">학습활동</a></li>
                                 <li class="menu_item"><a href="../html/work_result/work_result_1.html">활동결과</a></li>
                                 <li class="menu_item"><a href="#none">수업안내</a></li>
                                 <li class="menu_item"><a href="#none">공지사항</a></li>
@@ -364,5 +364,38 @@
         </footer>
         <!-- //footer -->
     </div>
+
+
+<script>
+    $(document).ready(function() {
+        var $tabItems = $(".tab_item");
+        var $cardItems = $(".card_item");
+
+        // 탭 클릭 이벤트 처리
+        $tabItems.on("click", function() {
+            var selectedCateType = $(this).attr("data-cate-type");
+
+            // 모든 카드 아이템을 숨김 처리
+            $cardItems.hide();
+
+            // 선택된 카테고리에 해당하는 카드 아이템만 보이도록 처리
+            if (selectedCateType === "all") {
+                $cardItems.show();
+            } else {
+                $cardItems.each(function() {
+                    var cateTypeElement = $(this).find(".cate_type");
+                    if (cateTypeElement.text() === selectedCateType) {
+                        $(this).show();
+                    }
+                });
+            }
+
+            // 선택된 탭 스타일 변경
+            $tabItems.removeClass("selected");
+            $(this).addClass("selected");
+        });
+    });
+</script>
+
 </body>
 </html>

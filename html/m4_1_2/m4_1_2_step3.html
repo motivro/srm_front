@@ -94,7 +94,7 @@
                         </div>
                         <div class="lnb_menu">
                             <ul class="menu_list">
-                                <li class="menu_item"><a href="../../html/index.html">학습활동</a></li>
+                                <li class="menu_item"><a class="active" href="../../html/index.html">학습활동</a></li>
                                 <li class="menu_item"><a href="../../html/work_result/work_result_1.html">활동결과</a></li>
                                 <li class="menu_item"><a href="#none">수업안내</a></li>
                                 <li class="menu_item"><a href="#none">공지사항</a></li>
@@ -113,34 +113,36 @@
                         <div class="step_box">
                             
                             <div class="step_cont">
-                                <div class="step_tit">활동결과(교사)</div>
+                                
+                                
 
-                                <ul class="step_progress">
-                                    <li class="step_item active">
-                                        <div class="step_now"><a href="./m4_1_2_step3.html">문제별</a></div>
-                                    </li>
-                                    <li class="step_item ">
-                                        <div class="step_now"><a href="./m4_1_2_step4.html">학생별</a></div>
-                                    </li>
-                                </ul>
-
-                                <div class="question_num_wrap">
-                                    <div class="active">1번</div>
-                                    <div>2번</div>
-                                    <div>3번</div>
-                                    <div>4번</div>
-                                    <div>5번</div>
-                                    <div>6번</div>
-                                    <div>7번</div>
-                                    <div>8번</div>
-                                    <div>9번</div>
-                                    <div>10번</div>
-                                </div>
-
-                                <div class="btn_box top_filter">
-                                    <div class="btn_refresh small"><i class="icon refresh"></i></div>
-                                </div>
                                 <div class="tbl_wrap">
+                                    <div class="tbl_tit row_2">
+                                        <div class="tit">활동결과(교사)</div>
+                                        <div class="btn_refresh small sk_tp"><i class="icon refresh"></i></div>
+                                    </div>
+                                    <ul class="step_progress">
+                                        <li class="step_item active">
+                                            <div class="step_now"><a href="./m4_1_2_step3.html">문제별</a></div>
+                                        </li>
+                                        <li class="step_item ">
+                                            <div class="step_now"><a href="./m4_1_2_step4.html">학생별</a></div>
+                                        </li>
+                                    </ul>
+    
+                                    <div class="question_num_wrap">
+                                        <div class="active">1번</div>
+                                        <div>2번</div>
+                                        <div>3번</div>
+                                        <div>4번</div>
+                                        <div>5번</div>
+                                        <div>6번</div>
+                                        <div>7번</div>
+                                        <div>8번</div>
+                                        <div>9번</div>
+                                        <div>10번</div>
+                                    </div>
+
                                     <table class="mt_tbl question_add_tbl">
                                         <colgroup>
                                             <col style="width:10%;">
@@ -256,7 +258,7 @@
                                 <div class="tbl_wrap_w">
                                     <div class="btn_box tbl_top_wrap">
                                         <a href="#" class="btn btn_attend"><i class="icon attend"></i><span class="btn_name">풀이시작</span></a>
-                                        <a href="#none" class="btn btn_attend"><i class="icon rating"></i><span class="btn_name">풀이마감</span></a>
+                                        <a href="#none" class="btn btn_attend"><i class="icon attend_end"></i><span class="btn_name">풀이마감</span></a>
                                     </div>
 
                                     <div class="tbl_wrap">
@@ -366,7 +368,7 @@
                             <p class="textC">황지우(30502), 박시현(30520)</p>
                         </div>
                         <div class="btn_box">
-                            <div class="btn file_submit"><a href="#none" class="">확인</a></div>
+                            <div class="btn file_submit"><a href="#none" onclick="closePopup('finPop')">확인</a></div>
                         </div>
                     </div>
                 </div>

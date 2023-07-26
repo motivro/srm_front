@@ -93,7 +93,7 @@
                         </div>
                         <div class="lnb_menu">
                             <ul class="menu_list">
-                                <li class="menu_item"><a href="../../html/index.html">학습활동</a></li>
+                                <li class="menu_item"><a class="active" href="../../html/index.html">학습활동</a></li>
                                 <li class="menu_item"><a href="../../html/work_result/work_result_1.html">활동결과</a></li>
                                 <li class="menu_item"><a href="#none">수업안내</a></li>
                                 <li class="menu_item"><a href="#none">공지사항</a></li>
@@ -114,7 +114,7 @@
                             <div class="step_cont">
                                 <div class="exam_box type_txtarea">
                                     <div class="exam_inner">
-                                        <textarea></textarea>
+                                        <textarea id="user_answer">이제까지 나는 우리 동네의 예술적 분와니기에 대하여 긴 설명을 했다.</textarea>
                                     </div>
                                 </div>
                                 <div class="btn_box">
@@ -189,6 +189,47 @@
             </div>
         </footer>
         <!-- //footer -->
+
+        <script>
+            $(document).ready(function() {
+    $('.btn_box').click(function() {
+        var userInput = $('#user_answer').val();
+        var standardText = '이제까지 나는 우리 동네의 예술적 분위기에 대하여 긴 설명을 했다.';
+
+        var wrongWords = '';
+        var wrongChars = '';
+
+        var splitUserInput = userInput.split(' ');
+        var splitStandardText = standardText.split(' ');
+
+        for (var i = 0; i < splitUserInput.length; i++) {
+            if (splitUserInput[i] !== splitStandardText[i]) {
+                wrongWords = splitUserInput[i];
+                break;
+            }
+        }
+
+        if (wrongWords !== '') {
+            var commonChars = [];
+
+            for (var i = 0; i < splitStandardText[i].length; i++) {
+                if (wrongWords.includes(splitStandardText[i][i])) {
+                    commonChars.push(splitStandardText[i][i]);
+                }
+            }
+
+            for (var i = 0; i < wrongWords.length; i++) {
+                if (!commonChars.includes(wrongWords[i])) {
+                    wrongChars += wrongWords[i];
+                }
+            }
+        }
+
+        alert('잘못된 문자들: ' + wrongChars);
+    });
+});
+
+        </script>
     </div>
 </body>
 </html>

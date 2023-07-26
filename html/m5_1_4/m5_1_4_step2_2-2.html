@@ -94,7 +94,7 @@
                         </div>
                         <div class="lnb_menu">
                             <ul class="menu_list">
-                                <li class="menu_item"><a href="../../html/index.html">학습활동</a></li>
+                                <li class="menu_item"><a class="active" href="../../html/index.html">학습활동</a></li>
                                 <li class="menu_item"><a href="../../html/work_result/work_result_1.html">활동결과</a></li>
                                 <li class="menu_item"><a href="#none">수업안내</a></li>
                                 <li class="menu_item"><a href="#none">공지사항</a></li>
@@ -248,6 +248,40 @@
                     $(this).addClass('active');
                 }
             });
+
+
+        // 의견등록 버튼 클릭 이벤트 핸들러 등록
+        $(".opin_add").on("click", function () {
+            // textarea에 입력된 내용 가져오기
+            var content = $(".write_zone textarea").val();
+            $(".write_zone textarea").val('');
+
+            // 오늘 날짜와 시간 가져오기
+            var now = new Date();
+            var month = String(now.getMonth() + 1).padStart(2, '0');
+            var date = String(now.getDate()).padStart(2, '0');
+            var hours = String(now.getHours()).padStart(2, '0');
+            var minutes = String(now.getMinutes()).padStart(2, '0');
+            var currentTime = month + '.' + date + ' ' + hours + ':' + minutes;
+
+            // 새로운 리뷰 아이템을 생성하여 review_list에 추가
+            var newReviewItem = `
+                <li class="review_item">
+                    <div class="left"><span class="user_thumb"><img src="../../resources/img/common/user_thumb.svg" alt="유저프로필 이미지"></span></div>
+                    <div class="right">
+                        <div class="user_infor">
+                            <span class="user_name"><span class="name_sta">이루다</span></span>
+                            <span class="add_time">${currentTime}</span>
+                            <span class="add_good"><i class="icon rating"></i></span>
+                        </div>
+                        <div class="cmt_box"><p>${content}</p></div>
+                    </div>
+                </li>
+            `;
+
+            $(".review_list").prepend(newReviewItem);
+        });
+        
         });
     </script>
 </body>

@@ -94,7 +94,7 @@
                         </div>
                         <div class="lnb_menu">
                             <ul class="menu_list">
-                                <li class="menu_item"><a href="../../html/index.html">학습활동</a></li>
+                                <li class="menu_item"><a class="active" href="../../html/index.html">학습활동</a></li>
                                 <li class="menu_item"><a href="../../html/work_result/work_result_1.html">활동결과</a></li>
                                 <li class="menu_item"><a href="#none">수업안내</a></li>
                                 <li class="menu_item"><a href="#none">공지사항</a></li>
@@ -111,13 +111,13 @@
                         <div class="step_box">
                             
                             <div class="step_cont">
-                                <div class="step_tit">문제풀이 결과</div>
+                                <div class="step_tit">활동결과</div>
                                 <div class="btn_box_justify">
                                     <div class="btn_box">
                                         <div class="read_txt red_color_ti">1차</div>
                                     </div>
                                     <div class="btn_box top_filter">
-                                        <div class="btn read_txt"><a href="./m4_1_2_step2.html">2차응시</a></div>
+                                        <div class="btn read_txt"><a href="#" onclick="openPopup('finPop')">2차응시</a></div>
                                         <div class="btn_refresh small"><i class="icon refresh"></i></div>
                                     </div>
                                 </div>
@@ -212,7 +212,7 @@
                                     
                                 </div>
                                 <div class="btn_box">
-                                    <div class="btn btn_confirm"><a href="#">문제 목록으로 이동</a></div>
+                                    <div class="btn btn_confirm"><a href="./m4_1_2_step0.html">문제 목록으로 이동</a></div>
                                 </div>
                             </div>
                         </div>
@@ -223,7 +223,7 @@
         </div>
         <!-- //container -->
     
-        <div id="finPop" class="ly_pop question_add_type">
+        <div id="finPop2" class="ly_pop question_add_type">
             <div class="ly_inner">
                 <div class="modal_cont">
                     <div class="ly_hd">
@@ -325,6 +325,60 @@
             </div>
         </div>
         
+
+        <div id="finPop" class="ly_pop">
+            <div class="ly_inner">
+                <div class="modal_cont question_radio_bd">
+                    <div class="ly_hd">
+                        <div class="tit">문제 풀이</div>
+                        <div class="ly_close_btn" onclick="closePopup('finPop')"><span class="sound_only">닫기</span><i class="icon close"></i></div>
+                    </div>
+                    <div class="ly_bd">
+                        <div class="bd_cont">
+                            <div class="question_box">
+                                <div class="box_inner minh200">
+                                    <p>시를 읽고 해석하는 방법에 속하지 않는 것은？</p>
+                                </div>
+                            </div>
+
+                            <div class="question_radio_box">
+                                <div class="cus_inp_box radio_inp2">
+                                    <label for="q_a_box1" class="label_box">시 자체의 내적 특성 중심 해석
+                                        <input type="radio" id="q_a_box1" name="q_a_box">
+                                        <span class="inp_custom"></span>
+                                    </label>
+                                </div>
+                                <div class="cus_inp_box radio_inp2">
+                                    <label for="q_a_box1" class="label_box">작가와 시와의 관계 중심 해석
+                                        <input type="radio" id="q_a_box1" name="q_a_box">
+                                        <span class="inp_custom"></span>
+                                    </label>
+                                </div>
+                                <div class="cus_inp_box radio_inp2">
+                                    <label for="q_a_box1" class="label_box">시 문장의 문법적 정확성 해석
+                                        <input type="radio" id="q_a_box1" name="q_a_box">
+                                        <span class="inp_custom"></span>
+                                    </label>
+                                </div>
+                                <div class="cus_inp_box radio_inp2">
+                                    <label for="q_a_box1" class="label_box">독자가 받는 영향력 중심 해석
+                                        <input type="radio" id="q_a_box1" name="q_a_box">
+                                        <span class="inp_custom"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ly_tbl">
+                        <div class="btn_box">
+                            <div class="btn btn_list"><a href="./m4_1_2_step2.html">제출하기</a></div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
         <div id="lyDim" onclick="closePopupOnDimClick()"></div>
 
         
