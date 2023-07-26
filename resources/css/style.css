@@ -213,6 +213,10 @@
 
 .card_list .card_item .btn_box{flex: 0 0 auto;display: flex;align-items: center;gap: 12px;}
 
+
+@media screen and (max-width:1100px) {
+    .card_list .card_item .card_inner:not(.content_top .card_list .card_item .card_inner){flex-direction: column;gap: 20px;align-items: flex-start;}
+}
 /* 아코디언 메뉴 */
 .acc_wrap .acc_box{margin-top:16px;}
 .acc_wrap .acc_tit{display: flex;align-items: center;justify-content: space-between;cursor: pointer;}

@@ -160,7 +160,7 @@ body.no-scroll{overflow: hidden;}
 
 /* content */
 #contents{min-height: var(--contentHeight);}
-#contents > .inner{display: flex;gap:30px;}
+#contents > .inner{display: flex;align-items:flex-start;gap:30px;}
 #container.sub #contents > .inner{max-width:1240px;}
 #contents #main{width: 100%;padding:24px 0 48px;flex: 1;}
 .inner_left{padding-left: 310px;min-width:1140px;}
@@ -196,7 +196,19 @@ body.no-scroll{overflow: hidden;}
 #lnb .lnb_menu .menu_item > a:hover{background-color: var(--deep_blue);color: #fff;}
 
 @media screen and (max-width:1240px) {
+    #lnb{width:230px;}
+    #lnb .lnb_top{padding: 16px 16px 0;background-size:125px 68px;background-position: right bottom;}
+    #lnb .lnb_top .tit{font-size: 20px;line-height:27px;}
+    #lnb .lnb_top .top_cont{width: 100%;}
     #container.sub .inner_left{min-width: 100%;}
+    #container .content_top .inner_left{min-width: 100%;padding-left:276px;}
+}
+
+@media screen and (max-width:1180px) {
+    .content_top .card_list .card_item .card_inner{align-items: flex-end;}
+    .content_top .card_list .card_item{padding: 0;}
+    .content_top .card_list .card_item .info_tit .tit{display: block;}
+    .content_top .card_list .card_item .info_tit .tit_name{display: block;}
 }
 
 .step_progress{display: flex;align-items: stretch;justify-content: flex-start;width:100%;position: relative;}
