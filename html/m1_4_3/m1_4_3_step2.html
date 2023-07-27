@@ -124,7 +124,6 @@
                                                 <span class="in">3</span>
                                                 <span>2</span>
                                                 <span>1</span>
-                                                <span>0</span>
                                             </div>
                                             <div class="ready">Get Ready</div>
                                         </div>
@@ -138,7 +137,7 @@
                                     </div>
                                 </div>
                                 <div class="btn_box">
-                                    <button type="button" id="submitBtn" class="btn exam_fin">종료</button>
+                                    <button type="button" id="submitBtn" class="btn exam_fin">제출하기</button>
                                     <button type="button" id="blankView" class="btn read_txt" disabled>본문 다시보기(5초)</button>
                                 </div>
                             </div>
@@ -232,7 +231,6 @@
     </div>
 
     <script>
-        var seconds = 0;
         $(document).ready(function() {
             var nums = $('.nums span');
             var counter = $('.counter');
@@ -242,6 +240,7 @@
             var originalContent = $("#blankExam").text();
             var isStarted = false;
             var timerId;
+            var userInput = {}; // 사용자의 입력 값을 저장할 객체
 
             runAnimation();
 
@@ -270,38 +269,48 @@
 
             // chgInp 함수 정의
             function chgInp() {
-                // $("#blankView").prop("disabled", true);
                 timerId = setTimeout(function () {
+                    var newContent = originalContent;
                     for (var i = 0; i < words.length; i++) {
                         var targetWord = words[i];
-                        var width = 0// 예시로 간단하게 글자 수에 따라 10px씩 곱한 값을 너비로 설정합니다.
-                        if(targetWord.length == 2){
-                            width = targetWord.length * 20;
-                        } else {
-                            width = targetWord.length * 15;
-                        }
-                        var inputElement = "<input type='text' class='input_blank' style='width:"+width +"px' data-word='" + targetWord + "'/>";
-                        originalContent = originalContent.replace(targetWord, inputElement);
+                        var width = targetWord.length == 2 ? targetWord.length * 20 : targetWord.length * 15;
+                        var inputValue = userInput[targetWord] || ""; // 기존 입력 값이 있으면 가져오고, 없으면 빈 문자열로 초기화
+                        var inputElement = "<input type='text' class='input_blank' style='width:"+width +"px' data-word='" + targetWord + "' value='" + inputValue + "' />";
+                        newContent = newContent.replace(targetWord, inputElement);
                     }
-                    $("#blankExam").html(originalContent);
+                    $("#blankExam").html(newContent);
                     $("#blankView").prop("disabled", false);
                     startTimer_ui();
                 }, 5000);
-                // 5000
             }
+
+            // 인풋 필드의 값이 변경될 때마다 저장하는 이벤트 핸들러
+            $(document).on("change", ".input_blank", function() {
+                var targetWord = $(this).data("word");
+                var inputVal = $(this).val();
+                userInput[targetWord] = inputVal;
+            });
 
             $("#blankView").on("click", function () {
                 clearTimeout(timerId);
                 $("#blankExam").html(originalContent);
                 $(".input_blank").each(function () {
                     var targetWord = $(this).data("word");
+                    var inputVal = userInput[targetWord] || ""; // 기존 입력 값이 있으면 가져오고, 없으면 빈 문자열로 초기화
+                    $(this).val(inputVal); // 인풋 필드에 기존 입력 값을 설정합니다.
                     $(this).replaceWith(targetWord);
                 });
-                seconds = seconds + 5
-                $('.sec').text(seconds.toString().padStart(2, '0'));
                 $("#blankView").prop("disabled", true);
                 setTimeout(function () {
-                    $("#blankExam").html(originalContent);
+                    var newContent = originalContent; // 원래 본문을 유지한 상태에서
+                    for (var i = 0; i < words.length; i++) {
+                        var targetWord = words[i];
+                        var width = targetWord.length == 2 ? targetWord.length * 20 : targetWord.length * 15;
+                        var inputValue = userInput[targetWord] || ""; // 기존 입력 값이 있으면 가져오고, 없으면 빈 문자열로 초기화
+                        var inputElement = "<input type='text' class='input_blank' style='width:"+width +"px' data-word='" + targetWord + "' value='" + inputValue + "' />";
+                        newContent = newContent.replace(targetWord, inputElement);
+                    }
+                    $("#blankExam").html(newContent); // 입력 필드가 있는 상태로 다시 변경합니다.
                     $(".input_blank").prop("disabled", false);
                     $("#blankView").prop("disabled", false);
                 }, 5000);
@@ -350,7 +359,7 @@
             // 타이머 시간을 저장할 변수들을 초기화합니다.
             let hours = 0;
             let minutes = 0;
-            seconds = 0;
+            let seconds = 0;
             let timerInterval = null;
 
             // 타이머를 업데이트하는 함수입니다.

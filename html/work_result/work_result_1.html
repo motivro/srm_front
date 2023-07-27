@@ -13,7 +13,7 @@
     <script src="../../resources/js/ui.js"></script>
 </head>
 <body>
-    <div id="wrap">
+    <div id="wrap" class="main">
         <!-- header -->
         <header id="header">
             <div class="hd_inner">
@@ -51,14 +51,23 @@
         <!-- container -->
         <div id="container">
             <!-- intro -->
-            <section class="content_top">
+            <section class="content_top ty2">
                 <div class="inner inner_left">
-                    <nav id="menuTab">
-                        <ul class="tab_list">
-                            <li class="tab_item selected"><a href="./work_result_1.html">포인트</a></li>
-                            <li class="tab_item "><a href="./work_result_2.html">참여활동별</a></li>
+                    <div class="card_wrap">
+                        <ul class="card_list">
+                            <li class="card_item ty1">
+                                <div class="card_inner">
+                                    <div class="item_infor">
+                                        <div class="info_tit">
+                                            <div class="tit"> 
+                                                <span class="tit_name">활동 결과</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
                         </ul>
-                    </nav>
+                    </div>
                 </div>
             </section>
 
@@ -91,7 +100,15 @@
                     <!-- main_cont -->
                     <div id="main">
                         <div class="tbl_wrap">
-                            <div class="tbl_tit row_2"><div class="tit">활동 결과</div><div class="btn btn_exel"><a href="#none">엑셀 다운로드</a></div></div>
+                            <ul class="step_progress">
+                                <li class="step_item active">
+                                    <div class="step_now"><a href="./work_result_1.html">포인트</a></div>
+                                </li>
+                                <li class="step_item ">
+                                    <div class="step_now"><a href="./work_result_2.html">참여활동별</a></div>
+                                </li>
+                            </ul>
+                            <div class="tbl_tit row_2 jc_end"><div class="btn btn_exel"><a href="#none">엑셀 다운로드</a></div></div>
                             <table class="mt_tbl type2" id="table">
                                 <thead>
                                     <tr>
@@ -115,7 +132,7 @@
                                 <tbody>
                                     <tr>
                                         <td><div>1</div></td>
-                                        <td><div><a href="#none">이루다(30501)</a></div></td>
+                                        <td><div><a href="#none">이루다<span class="user_code">(30501)</span></a></div></td>
                                         <td><div>19.9</div></td>
                                         <td><div>8.5</div></td>
                                         <td><div>7.7</div></td>
@@ -128,7 +145,7 @@
                                     </tr>
                                     <tr>
                                         <td><div>2</div></td>
-                                        <td><div><a href="#none">황지우(30502)</a></div></td>
+                                        <td><div><a href="#none">황지우<span class="user_code">(30502)</span></a></div></td>
                                         <td><div>20.5</div></td>
                                         <td><div>8.1</div></td>
                                         <td><div>7.9</div></td>
@@ -141,7 +158,7 @@
                                     </tr>
                                     <tr>
                                         <td><div>3</div></td>
-                                        <td><div><a href="#none">이연제(30503)</a></div></td>
+                                        <td><div><a href="#none">이연제<span class="user_code">(30503)</span></a></div></td>
                                         <td><div>22.9</div></td>
                                         <td><div>7.9</div></td>
                                         <td><div>6.5</div></td>
@@ -154,7 +171,7 @@
                                     </tr>
                                     <tr>
                                         <td><div>4</div></td>
-                                        <td><div><a href="#none">한정민(30504)</a></div></td>
+                                        <td><div><a href="#none">한정민<span class="user_code">(30504)</span></a></div></td>
                                         <td><div>22.4</div></td>
                                         <td><div>8.4</div></td>
                                         <td><div>7.9</div></td>
@@ -167,7 +184,7 @@
                                     </tr>
                                     <tr>
                                         <td><div>5</div></td>
-                                        <td><div><a href="#none">안준서(30505)</a></div></td>
+                                        <td><div><a href="#none">안준서<span class="user_code">(30505)</span></a></div></td>
                                         <td><div>27.9</div></td>
                                         <td><div>8.8</div></td>
                                         <td><div>9.8</div></td>
@@ -180,7 +197,7 @@
                                     </tr>
                                     <tr>
                                         <td><div>6</div></td>
-                                        <td><div><a href="#none">선민아(30506)</a></div></td>
+                                        <td><div><a href="#none">선민아<span class="user_code">(30506)</span></a></div></td>
                                         <td><div>30.2</div></td>
                                         <td><div>8.9</div></td>
                                         <td><div>10.1</div></td>
@@ -193,7 +210,7 @@
                                     </tr>
                                     <tr>
                                         <td><div>7</div></td>
-                                        <td><div><a href="#none">안준서(30507)</a></div></td>
+                                        <td><div><a href="#none">안준서<span class="user_code">(30507)</span></a></div></td>
                                         <td><div>31.7</div></td>
                                         <td><div>9.0</div></td>
                                         <td><div>11.1</div></td>
@@ -206,7 +223,7 @@
                                     </tr>
                                     <tr>
                                         <td><div>8</div></td>
-                                        <td><div><a href="#none">고도윤(30508)</a></div></td>
+                                        <td><div><a href="#none">고도윤<span class="user_code">(30508)</span></a></div></td>
                                         <td><div>31.3</div></td>
                                         <td><div>9.1</div></td>
                                         <td><div>10.9</div></td>
@@ -219,7 +236,7 @@
                                     </tr>
                                     <tr>
                                         <td><div>9</div></td>
-                                        <td><div><a href="#none">김시윤(30509)</a></div></td>
+                                        <td><div><a href="#none">김시윤<span class="user_code">(30509)</span></a></div></td>
                                         <td><div>18.9</div></td>
                                         <td><div>7.9</div></td>
                                         <td><div>10.7</div></td>
@@ -232,7 +249,7 @@
                                     </tr>
                                     <tr>
                                         <td><div>10</div></td>
-                                        <td><div><a href="#none">권하준(30510)</a></div></td>
+                                        <td><div><a href="#none">권하준<span class="user_code">(30510)</span></a></div></td>
                                         <td><div>17.3</div></td>
                                         <td><div>7.8</div></td>
                                         <td><div>7.8</div></td>
@@ -245,7 +262,7 @@
                                     </tr>
                                     <tr>
                                         <td><div>11</div></td>
-                                        <td><div><a href="#none">송준(30511)</a></div></td>
+                                        <td><div><a href="#none">송준<span class="user_code">(30511)</span></a></div></td>
                                         <td><div>12.6</div></td>
                                         <td><div>7.1</div></td>
                                         <td><div>6.1</div></td>
@@ -258,7 +275,7 @@
                                     </tr>
                                     <tr>
                                         <td><div>12</div></td>
-                                        <td><div><a href="#none">김규빈(30512)</a></div></td>
+                                        <td><div><a href="#none">김규빈<span class="user_code">(30512)</span></a></div></td>
                                         <td><div>10.7</div></td>
                                         <td><div>7.0</div></td>
                                         <td><div>5.0</div></td>

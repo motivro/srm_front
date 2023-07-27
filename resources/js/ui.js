@@ -45,6 +45,14 @@ $(document).ready(function(){
         });
     }
 
+    $(".mt_tbl .graph .progress").each(function (index) {
+        const bar = $(this).find(".bar");
+        const percent = $(this).find(".percent");
+        const width = barWidthArray[index];
+        bar.css("width", width + "%");
+        percent.text(width.toFixed(0) + "%");
+    });
+    
     // function sortTableByColumn(columnIndex, isAscending) {
     //     // 헤더에서 클릭한 열의 데이터 값을 기준으로 정렬
     //     const rows = $tbody.find('tr').get();

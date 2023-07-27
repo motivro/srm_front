@@ -168,9 +168,12 @@ body.no-scroll{overflow: hidden;}
 #container.sub .inner_left{min-width:1240px;max-width:1240px;}
 .content_top{padding-top: 40px;min-height:150px;display: flex;justify-content: flex-start;align-items: flex-end;}
 .content_top.sub{align-items: flex-start;}
+.content_top.ty2{align-items: flex-start;}
+.content_top.ty2 .card_list .card_item.ty1 .info_tit{margin-top: 0;}
+.content_top.ty2 .card_list .card_item .info_tit .tit > span{font-size: 24px;font-weight: 700;line-height: 30px;}
 
 .content_top .card_wrap{margin-top: 0;}
-.content_top .card_list .card_item{border:none;padding: 0 50px 0 0;}
+.content_top .card_list .card_item{border:none;padding: 0;}
 
 .main .content_top{min-height:100px;}
 .main #lnb{transform: translateY(-80px);}
@@ -219,17 +222,20 @@ body.no-scroll{overflow: hidden;}
 .step_progress .step_item{color: var(--888);}
 .step_progress .step_item.active{color: var(--333);}
 .step_progress .step_item .step_now > a{display: block;}
-.step_progress .step_item .step_now{font-size: 14px;font-weight:600;line-height:17px;}
-.step_progress .step_item .step_desc{font-size: 14px;font-weight:400;line-height:17px;}
+.step_progress .step_item .step_now{font-size: 18px;font-weight:600;line-height:22px;}
+.step_progress .step_item .step_desc{font-size: 18px;font-weight:400;line-height:22px;}
 
 .tbl_wrap + .tbl_wrap{margin-top:24px;}
 .tbl_wrap .tbl_tit{font-size: 24px;font-weight:400;line-height:29px;color: var(--black);}
 .tbl_wrap .tbl_tit.row_2{display: flex;align-items: center;justify-content: space-between;}
+.tbl_wrap .tbl_tit.row_2.jc_end{justify-content: flex-end;margin-top: 20px;}
 .ly_tbl .tbl_wrap .tbl_tit{font-size: 18px;font-weight:500;line-height:24px;color: var(--black);}
 /* .tbl_wrap .tbl_tit.row_2 + .mt_tbl{margin-top:15px;} */
+.tbl_wrap .tbl_tit.row_2 .tit.no::before{display: none;}
 .tbl_wrap .tbl_tit.row_2 .tit:before{content:'▶';display:inline-block;clear:both;font-size:20px;margin-right:4px}
 
 .tbl_wrap .mt_tbl{margin-top:20px;}
+.tbl_wrap .ta_c{text-align: center !important;}
 .tbl_wrap .mt_tbl.type2 thead th{vertical-align: middle;border-left: 1px solid var(--white);border-right: 1px solid var(--white);border-top:1px solid var(--white)}
 .tbl_wrap .mt_tbl.type2 thead th.first{border-left: 0;}
 .tbl_wrap .mt_tbl.type2 thead th.last{border-right: 0;}
@@ -251,7 +257,7 @@ body.no-scroll{overflow: hidden;}
 
 .mt_tbl .graph{width: 100%;border-radius:2px;overflow: hidden;}
 .mt_tbl .graph .progress{width: 100%;height:25px;background-color: var(--ddd);position: relative;}
-.mt_tbl .graph .progress .bar{position: absolute;left: 0;top: 0;z-index:5;height: 100%;background-color: var(--deep_blue);border-radius:2px;}
+.mt_tbl .graph .progress .bar{position: absolute;left: 0;top: 0;z-index:5;width:0;height: 100%;background-color: var(--deep_blue);border-radius:2px;transition:width .55s ease}
 .mt_tbl .graph .progress .percent{position: absolute;top:0;right:10px;z-index:6;font-size: 11px;font-weight:300;line-height:18px;color:#fff;display:none}
 
 .mt_tbl .user_name{position: relative;}
@@ -260,8 +266,17 @@ body.no-scroll{overflow: hidden;}
 .mt_tbl .user_name .icon.rating{width: 16px;height: 18px;position: absolute;left: -5px;top: 50%;transform: translateY(-50%);background-image: url('../img/icon/icon_rating_chked.svg');background-repeat: no-repeat;background-size:cover;background-position:center;visibility: hidden;opacity: 0;pointer-events: none;transition: opacity .25s ease;}
 .mt_tbl .user_name.active .icon.rating{visibility: visible;opacity: 1;}
 .mt_tbl .user_name .name_sta{cursor: pointer;position: relative;}
+.mt_tbl .user_name .name_sta.no::after{display: none;}
 .mt_tbl .user_name .name_sta:after{content: '';display: block;width: 100%;height:1px;background-color:var(--333);position: absolute;left: 0;bottom: -2px;z-index: 3;transition: width .25s ease;}
 .mt_tbl .user_name .name_sta:hover:after{width: 100%;}
+
+.mt_tbl .user_code{color: #888;font-size: 14px;}
+
+.mt_tbl .btn_click{cursor: pointer;position: relative;color: #3973B7;}
+.mt_tbl .btn_click:after{content: '';display: block;width: 100%;height:1px;background-color:#3973B7;position: absolute;left: 0;bottom: -1px;z-index: 3;}
+
+.mt_tbl .ms_over{cursor: pointer;}
+.mt_tbl .ms_over:hover{text-decoration: underline;}
 
 .mt_tbl .user_name.ty2 .icon.rating{background-image: url('../img/icon/icon_rating_w.svg');}
 .mt_tbl .user_name.ty2.active .icon.rating{background-image: url('../img/icon/icon_rating_w.svg');}

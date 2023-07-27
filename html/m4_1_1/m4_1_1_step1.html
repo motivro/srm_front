@@ -103,7 +103,6 @@
                         <div class="lnb_menu">
                             <ul class="menu_list">
                                 <li class="menu_item"><a class="active" href="../../html/index.html">학습활동</a></li>
-                                <li class="menu_item"><a href="../../html/work_result/work_result_1.html">활동결과</a></li>
                                 <li class="menu_item"><a href="#none">수업안내</a></li>
                                 <li class="menu_item"><a href="#none">공지사항</a></li>
                                 <li class="menu_item"><a href="#none">Q&A</a></li>
@@ -134,18 +133,18 @@
                                         </colgroup>
                                         <thead>
                                             <tr>
-                                                <th><div>No</div></th>
-                                                <th><div>문제</div></th>
-                                                <th><div>등록일</div></th>
-                                                <th><div>투표수</div></th>
+                                                <th class="ta_c"><div>No</div></th>
+                                                <th class="ta_c"><div>문제</div></th>
+                                                <th class="ta_c"><div>등록일</div></th>
+                                                <th class="ta_c"><div>투표수</div></th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td><div>1</div></td>
-                                                <td class="ta_l user_name" onclick="openPopup('finPop')"><span class="name_sta">다음중 글쓰기 계획을 세울 때 포함되는 사항으로서 적절하지 않은 것은？</span></td>
-                                                <td><div>23-10-10</div></td>
-                                                <td><div>0</div></td>
+                                                <td class="ta_c"><div>1</div></td>
+                                                <td class="ta_c" onclick="openPopup('finPop')"><span class="ms_over">다음중 글쓰기 계획을 세울 때 포함되는 사항으로서 적절하지 않은 것은？</span></td>
+                                                <td class="ta_c"><div>23-10-10</div></td>
+                                                <td class="ta_c"><div>0</div></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -187,7 +186,7 @@
                                                 <div id="summernote"></div>
                                             </td>
                                         </tr>
-                                        <tr>
+                                        <tr class="answer_cont">
                                             <th class="vertical_mi">
                                                 <div class="cus_inp_box chk_inp type2">
                                                     <label for="q_a_box1" class="label_box">1번
@@ -201,7 +200,7 @@
                                                 <input type="text">
                                             </td>
                                         </tr>
-                                        <tr>
+                                        <tr class="answer_cont">
                                             <th class="vertical_mi">
                                                 <div class="cus_inp_box chk_inp type2">
                                                     <label for="q_a_box2" class="label_box">2번
@@ -215,7 +214,7 @@
                                                 <input type="text">
                                             </td>
                                         </tr>
-                                        <tr>
+                                        <tr class="answer_cont">
                                             <th class="vertical_mi">
                                                 <div class="cus_inp_box chk_inp type2">
                                                     <label for="q_a_box3" class="label_box">3번
@@ -229,7 +228,7 @@
                                                 <input type="text">
                                             </td>
                                         </tr>
-                                        <tr>
+                                        <tr class="answer_cont">
                                             <th class="vertical_mi">
                                                 <div class="cus_inp_box chk_inp type2">
                                                     <label for="q_a_box4" class="label_box">4번
@@ -284,6 +283,42 @@
     </div>
 
     <script>
+        $(document).ready(function () {
+            // 보기추가 버튼(q_add_wrap) 클릭 이벤트 처리
+            $(".q_add_wrap").on("click", function () {
+                var totalAnswers = $(".answer_cont").length;
+
+                if (totalAnswers < 10) {
+                    // 새로운 보기 행 추가
+                    var answerCount = totalAnswers + 1;
+                    var newAnswerRow = "<tr class='answer_cont'>" +
+                        "<th class='vertical_mi'>" +
+                        "<div class='cus_inp_box chk_inp type2'>" +
+                        "<label for='q_a_box" + answerCount + "' class='label_box'>" + answerCount + "번" +
+                        "<input type='radio' id='q_a_box" + answerCount + "' name='q_a_box'>" +
+                        "<span class='inp_custom'></span>" +
+                        "</label>" +
+                        "<div class='q_a_close'></div>" +
+                        "</div>" +
+                        "</th>" +
+                        "<td class='ta_l'>" +
+                        "<input type='text'>" +
+                        "</td>" +
+                        "</tr>";
+
+                    $(".question_add_tbl tbody").append(newAnswerRow);
+                } else {
+                    alert("최대 10개까지만 추가할 수 있습니다.");
+                }
+            });
+
+            // q_a_close 버튼 클릭 이벤트 처리
+            $(document).on("click", ".q_a_close", function () {
+                // 해당 부모 행 삭제
+                $(this).closest(".answer_cont").remove();
+            });
+        });
+
         $('#summernote').summernote({
             styleTags: ['p', 'h4', 'h5'],
             toolbar: [
@@ -314,6 +349,7 @@
         });
 
         $('#summernote').summernote();
+        $('#summernote').summernote('insertText', '다음중 글쓰기 계획을 세울 때 포함되는 사항으로서 적절하지 않은 것은？');
     </script>
 </body>
 </html>

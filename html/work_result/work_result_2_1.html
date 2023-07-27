@@ -13,7 +13,7 @@
     <script src="../../resources/js/ui.js"></script>
 </head>
 <body>
-    <div id="wrap">
+    <div id="wrap" class="main">
         <!-- header -->
         <header id="header">
             <div class="hd_inner">
@@ -51,14 +51,23 @@
         <!-- container -->
         <div id="container">
             <!-- intro -->
-            <section class="content_top">
+            <section class="content_top ty2">
                 <div class="inner inner_left">
-                    <nav id="menuTab">
-                        <ul class="tab_list">
-                            <li class="tab_item "><a href="./work_result_1.html">포인트</a></li>
-                            <li class="tab_item selected"><a href="./work_result_2.html">참여활동별</a></li>
+                    <div class="card_wrap">
+                        <ul class="card_list">
+                            <li class="card_item ty1">
+                                <div class="card_inner">
+                                    <div class="item_infor">
+                                        <div class="info_tit">
+                                            <div class="tit"> 
+                                                <span class="tit_name">활동 결과</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
                         </ul>
-                    </nav>
+                    </div>
                 </div>
             </section>
 
@@ -92,7 +101,14 @@
                     <div id="main">
                         <div class="step_box teacher">
                             <div class="tbl_wrap">
-                                <div class="tbl_tit">활동결과</div>
+                                <ul class="step_progress">
+                                    <li class="step_item ">
+                                        <div class="step_now"><a href="./work_result_1.html">포인트</a></div>
+                                    </li>
+                                    <li class="step_item active">
+                                        <div class="step_now"><a href="./work_result_2.html">참여활동별</a></div>
+                                    </li>
+                                </ul>
                                 <div class="select_wrap">
                                     <select name="activity" id="activitySelect">
                                         <option value="[M4-1-2]조별 주관식 문제 풀이">[M4-1-2]조별 주관식 문제 풀이</option>
