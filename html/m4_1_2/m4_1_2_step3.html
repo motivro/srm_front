@@ -102,7 +102,7 @@
                                 <li class="menu_item"><a href="#none">자료실</a></li>
                                 <li class="menu_item"><a href="#none">조편성</a></li>
                                 <li class="menu_item"><a href="#none">학생관리</a></li>
-                                <li class="menu_item"><a href="#none">나기기</a></li>
+                                <li class="menu_item"><a href="#none">나가기</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -189,7 +189,7 @@
                                                         </div>
                                                     </th>
                                                     <td class="ta_l">
-                                                        시 자체의 내적 특성 중심 해석
+                                                        <div class="info_cate2"><span class="btn_click">시 자체의 내적 특성 중심 해석</span><div class="cate_type indiv">정답</div></div>
                                                     </td>
                                                     <td class="ta_l">
                                                         4명 (17%)
@@ -205,7 +205,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td class="ta_l">
-                                                        작가와 시와의 관계 중심 해석
+                                                        <div class="info_cate2"><span class="btn_click">작가와 시와의 관계 중심 해석</span><div class="cate_type indiv">정답</div></div>
                                                     </td>
                                                     <td class="ta_l">
                                                         8명 (33%)
@@ -221,7 +221,7 @@
                                                 </tr>
 
                                                 <tr>
-                                                    <td class="ta_l info_cate2">시 문장의 문법적 정확성 해석 <div class="cate_type group">선택</div></td>
+                                                    <td class="ta_l info_cate2"><span class="btn_click">시 문장의 문법적 정확성 해석</span><div class="cate_type indiv">정답</div></td>
                                                     <td class="ta_l">
                                                         9명 (38%)
                                                     </td>
@@ -236,7 +236,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td class="ta_l">
-                                                        독자가 받는 영향력 중심 해석
+                                                        <div class="info_cate2"><span class="btn_click">독자가 받는 영향력 중심 해석</span><div class="cate_type indiv">정답</div></div>
                                                     </td>
                                                     <td class="ta_l">
                                                         3명 (12%)
@@ -279,10 +279,10 @@
                                                         </div>
                                                     </th>
                                                     <td class="ta_l">
-                                                        시 자체의 내적 특성 중심 해석
+                                                        <div class="info_cate2"><span class="btn_click">시 자체의 내적 특성 중심 해석</span><div class="cate_type indiv">정답</div></div>
                                                     </td>
                                                     <td class="ta_l">
-                                                        4명 (17%)
+                                                        1명 (4%)
                                                     </td>
                                                     <td class="ta_l">
                                                         <div class="graph">
@@ -295,10 +295,10 @@
                                                 </tr>
                                                 <tr>
                                                     <td class="ta_l">
-                                                        작가와 시와의 관계 중심 해석
+                                                        <div class="info_cate2"><span class="btn_click">작가와 시와의 관계 중심 해석</span><div class="cate_type indiv">정답</div></div>
                                                     </td>
                                                     <td class="ta_l">
-                                                        8명 (33%)
+                                                        1명 (4%)
                                                     </td>
                                                     <td class="ta_l">
                                                         <div class="graph">
@@ -311,9 +311,9 @@
                                                 </tr>
 
                                                 <tr>
-                                                    <td class="ta_l info_cate2">시 문장의 문법적 정확성 해석 <div class="cate_type group">선택</div></td>
+                                                    <td class="ta_l"><div class="info_cate2"><span class="btn_click">시 문장의 문법적 정확성 해석 </span><div class="cate_type indiv">정답</div></div></td>
                                                     <td class="ta_l">
-                                                        9명 (38%)
+                                                        19명 (79%)
                                                     </td>
                                                     <td class="ta_l">
                                                         <div class="graph">
@@ -326,7 +326,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td class="ta_l">
-                                                        독자가 받는 영향력 중심 해석
+                                                        <div class="info_cate2"><span class="btn_click">독자가 받는 영향력 중심 해석</span><div class="cate_type indiv">정답</div></div>
                                                     </td>
                                                     <td class="ta_l">
                                                         3명 (12%)
@@ -396,44 +396,57 @@
         <!-- //footer -->
     </div>
 
+    <style>
+        .info_cate2 .btn_click{display: inline-block;}
+        .info_cate2 .btn_click + .cate_type{opacity: 0;transition: opacity .35s ease;}
+        .info_cate2.active .btn_click + .cate_type{opacity: 1;}
+    </style>
     <script>
-        var barWidthArray = [17, 33, 38, 12, 17, 33, 38, 12]; // 이 배열에 해당하는 값이 bar의 넓이로 적용됨 
+        var barWidthArray = [17, 33, 38, 12, 4, 4, 79, 13]; // 이 배열에 해당하는 값이 bar의 넓이로 적용됨 
 
         $(document).ready(function() {
-    var data = [
-        {number: 1,participants: [24,2], question: '1번문제 시를 읽고 해석하는 방법에 속하지 않는 것은？'},
-        {number: 2,participants: [22,4], question: '2번문제 시를 읽고 해석하는 방법에 속하지 않는 것은？'},
-        {number: 3,participants: [20,6], question: '3번문제 시를 읽고 해석하는 방법에 속하지 않는 것은？'},
-        {number: 4,participants: [24,2], question: '4번문제 시를 읽고 해석하는 방법에 속하지 않는 것은？'},
-        {number: 5,participants: [22,4], question: '5번문제 시를 읽고 해석하는 방법에 속하지 않는 것은？'},
-        {number: 6,participants: [20,6], question: '6번문제 시를 읽고 해석하는 방법에 속하지 않는 것은？'},
-        {number: 7,participants: [24,2], question: '7번문제 시를 읽고 해석하는 방법에 속하지 않는 것은？'},
-        {number: 8,participants: [22,4], question: '8번문제 시를 읽고 해석하는 방법에 속하지 않는 것은？'},
-        {number: 9,participants: [20,6], question: '9번문제 시를 읽고 해석하는 방법에 속하지 않는 것은？'},
-        {number: 10,participants: [24,2], question: '10번문제 시를 읽고 해석하는 방법에 속하지 않는 것은？'},
-    ]
+            var data = [
+                {number: 1,participants: [24,2], question: '1번문제 시를 읽고 해석하는 방법에 속하지 않는 것은？'},
+                {number: 2,participants: [22,4], question: '2번문제 시를 읽고 해석하는 방법에 속하지 않는 것은？'},
+                {number: 3,participants: [20,6], question: '3번문제 시를 읽고 해석하는 방법에 속하지 않는 것은？'},
+                {number: 4,participants: [24,2], question: '4번문제 시를 읽고 해석하는 방법에 속하지 않는 것은？'},
+                {number: 5,participants: [22,4], question: '5번문제 시를 읽고 해석하는 방법에 속하지 않는 것은？'},
+                {number: 6,participants: [20,6], question: '6번문제 시를 읽고 해석하는 방법에 속하지 않는 것은？'},
+                {number: 7,participants: [24,2], question: '7번문제 시를 읽고 해석하는 방법에 속하지 않는 것은？'},
+                {number: 8,participants: [22,4], question: '8번문제 시를 읽고 해석하는 방법에 속하지 않는 것은？'},
+                {number: 9,participants: [20,6], question: '9번문제 시를 읽고 해석하는 방법에 속하지 않는 것은？'},
+                {number: 10,participants: [24,2], question: '10번문제 시를 읽고 해석하는 방법에 속하지 않는 것은？'},
+            ]
 
-    $('.question_num_wrap > div').click(function() {
-        // 클릭된 div의 q_num 속성 값을 가져옵니다.
-        var q_num = $(this).attr('q_num');
+            $('.question_num_wrap > div').click(function() {
+                // 클릭된 div의 q_num 속성 값을 가져옵니다.
+                var q_num = $(this).attr('q_num');
 
-        if(!$(this).hasClass('active')){
-            $('.question_num_wrap > div').removeClass('active');
-            $(this).addClass('active');
-        } 
-        // q_num 값에 해당하는 데이터를 찾습니다.
-        var selectedData = data.find(function(item) {
-            return item.number == q_num;
+                if(!$(this).hasClass('active')){
+                    $('.question_num_wrap > div').removeClass('active');
+                    $(this).addClass('active');
+                } 
+                // q_num 값에 해당하는 데이터를 찾습니다.
+                var selectedData = data.find(function(item) {
+                    return item.number == q_num;
+                });
+                if (selectedData) {
+                    // 참여자 정보와 문제를 화면에 표시합니다.
+                    $('.question_add_tbl .q_a_title .partic').text(selectedData.participants[0]+' 명 참여');
+                    $('.question_add_tbl .q_a_title .non_partic').text(selectedData.participants[1]+' 명');
+                    $('.question_add_tbl .qqq_name').text('문제 '+selectedData.number+'.');
+                    $('.question_add_tbl .s_ti').text(selectedData.question);
+                }
+            });
+            $('.btn_click').on('click', function(){
+                if($(this).closest('.info_cate2').hasClass('active')){
+                    $(this).closest('.info_cate2').removeClass('active')
+                }else{
+                    $(this).closest('.info_cate2').addClass('active')
+                }
+                
+            });
         });
-        if (selectedData) {
-            // 참여자 정보와 문제를 화면에 표시합니다.
-            $('.question_add_tbl .q_a_title .partic').text(selectedData.participants[0]+' 명 참여');
-            $('.question_add_tbl .q_a_title .non_partic').text(selectedData.participants[1]+' 명');
-            $('.question_add_tbl .qqq_name').text('문제 '+selectedData.number+'.');
-            $('.question_add_tbl .s_ti').text(selectedData.question);
-        }
-    });
-});
 
     </script>
 </body>

@@ -98,7 +98,7 @@
                                 <li class="menu_item"><a href="#none">공지사항</a></li>
                                 <li class="menu_item"><a href="#none">Q&A</a></li>
                                 <li class="menu_item"><a href="#none">자료실</a></li>
-                                <li class="menu_item"><a href="#none">나기기</a></li>
+                                <li class="menu_item"><a href="#none">나가기</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -144,7 +144,7 @@
                             <div class="result_box">
                                 <div class="box_inner ty2">
                                     <div class="result_info">
-                                        <div class="info_txt">오타 : <span class="err">3개</span></div>
+                                        <div class="info_txt">오타 : <span class="err">0개</span></div>
                                     </div>
                                 </div>
                             </div>
@@ -190,24 +190,25 @@
         <!-- //footer -->
 
         <script>
-
             var data2 = '이제까지 나는 우리 동네의 예술적 분위기에 대하여 긴 설명을 했다.';
 
             $(document).ready(function() {
                 $('.btn_box').click(function() {
                     $('.answer_data1 .txt_box p').text("");
-                   $('.answer_data2 .txt_box p').text("");
+                    $('.answer_data2 .txt_box p').text("");
                     var data1 = document.getElementById("user_answer").value.trim();
-                    var splitData1 = data1.split(' ');
-                    var splitData2 = data2.split(' ');
                     var totalDiffChars = 0;
-                    for (var i = 0; i < splitData1.length; i++) {
-                        if (splitData1[i] !== splitData2[i]) {
-                            var result = findDifference(splitData1[i], splitData2[i]);
-                            var originalWord = splitData1[i];
-                            var newWord = originalWord.substring(0, result.startIndex) + "<span  class='err'>" + originalWord.substring(result.startIndex, result.endIndex) + "</span>" + originalWord.substring(result.endIndex);
-                            data1 = data1.replace(splitData1[i], newWord);
-                            totalDiffChars += result.diff.length;
+                    if(data1 != '' || data1 != ' '){
+                        var splitData1 = data1.split(' ');
+                        var splitData2 = data2.split(' ');
+                        for (var i = 0; i < splitData1.length; i++) {
+                            if (splitData1[i] !== splitData2[i]) {
+                                var result = findDifference(splitData1[i], splitData2[i]);
+                                var originalWord = splitData1[i];
+                                var newWord = originalWord.substring(0, result.startIndex) + "<span  class='err'>" + originalWord.substring(result.startIndex, result.endIndex) + "</span>" + originalWord.substring(result.endIndex);
+                                data1 = data1.replace(splitData1[i], newWord);
+                                totalDiffChars += result.diff.length;
+                            }
                         }
                     }
                     

@@ -188,7 +188,7 @@
 .step_box .top_info .user_info.type2{font-size: 16px;font-weight: 600;}
 .step_box .top_info .user_info.type2 .user_sta{font-size: 16px;}
 
-.rating_box_mg{margin:150px 0 40px}
+.rating_box_mg{margin:40px 0;}
 .video_exam.rating_box_mg .rating_box .rating_cont.ty1 .rating_item{gap: 20px;flex: 0 0 auto;padding: 15px 30px;border-radius: 27px;}
 
 .rating_box_mg .icon.bad,
@@ -256,3 +256,22 @@
 
 .notice_box p{font-size:16px!important;line-height:24px !important;}
 /* .mt_tbl .user_name .name_sta:after 밑줄 나옴 */
+
+.step_box .step_cont{position:relative}
+.intervalTimes {display:none;
+  margin-top: 30px;
+  padding: 30px 20px;
+  background-color: #fff;
+  border: solid 1px #ccc;
+  border-radius: 4px;
+  font-size: 50px;
+  text-align: center;
+  width: 250px;
+  margin: 40px auto 0px auto;
+  color: #888;
+  font-weight: 700;
+  background-color: #f9f9f9;
+  text-align:center
+}
+
+.intervalTimes2{}

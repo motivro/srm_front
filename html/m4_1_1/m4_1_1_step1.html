@@ -107,7 +107,7 @@
                                 <li class="menu_item"><a href="#none">공지사항</a></li>
                                 <li class="menu_item"><a href="#none">Q&A</a></li>
                                 <li class="menu_item"><a href="#none">자료실</a></li>
-                                <li class="menu_item"><a href="#none">나기기</a></li>
+                                <li class="menu_item"><a href="#none">나가기</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -178,7 +178,7 @@
                                     <tbody>
                                         <tr>
                                             <th><div>유형</div></th>
-                                            <td class="ta_l user_name"><span class="name_sta">객관식</span></td>
+                                            <td class="ta_l"><div>객관식</div></td>
                                         </tr>
                                         <tr>
                                             <th><div>문제</div></th>
@@ -197,7 +197,7 @@
                                                 </div>
                                             </th>
                                             <td class="ta_l">
-                                                <input type="text">
+                                                <input type="text" value="주제">
                                             </td>
                                         </tr>
                                         <tr class="answer_cont">
@@ -211,7 +211,7 @@
                                                 </div>
                                             </th>
                                             <td class="ta_l">
-                                                <input type="text">
+                                                <input type="text" value="감동">
                                             </td>
                                         </tr>
                                         <tr class="answer_cont">
@@ -225,7 +225,7 @@
                                                 </div>
                                             </th>
                                             <td class="ta_l">
-                                                <input type="text">
+                                                <input type="text" value="목적">
                                             </td>
                                         </tr>
                                         <tr class="answer_cont">
@@ -239,7 +239,7 @@
                                                 </div>
                                             </th>
                                             <td class="ta_l">
-                                                <input type="text">
+                                                <input type="text" value="매체">
                                             </td>
                                         </tr>
                                     </tbody>
@@ -288,7 +288,7 @@
             $(".q_add_wrap").on("click", function () {
                 var totalAnswers = $(".answer_cont").length;
 
-                if (totalAnswers < 10) {
+                if (totalAnswers < 6) {
                     // 새로운 보기 행 추가
                     var answerCount = totalAnswers + 1;
                     var newAnswerRow = "<tr class='answer_cont'>" +
@@ -308,7 +308,7 @@
 
                     $(".question_add_tbl tbody").append(newAnswerRow);
                 } else {
-                    alert("최대 10개까지만 추가할 수 있습니다.");
+                    alert("최대 6개까지만 추가할 수 있습니다.");
                 }
             });
 

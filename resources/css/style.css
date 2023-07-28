@@ -201,6 +201,7 @@
 .card_list{}
 
 .main .card_list .card_item:nth-child(odd){background-color:#f3f9ff}
+.main .content_top .card_list .card_item:nth-child(odd){background-color: transparent;}
 .card_list .card_item{display:block;margin-top:15px;border: 1px solid var(--d9);border-radius:4px;overflow:hidden;}
 .card_list .card_item:first-child{margin-top: 0;}
 .card_list .card_item .card_inner{display: flex;justify-content: space-between;align-items: center;}

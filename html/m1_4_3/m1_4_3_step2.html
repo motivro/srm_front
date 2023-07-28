@@ -99,7 +99,7 @@
                                 <li class="menu_item"><a href="#none">공지사항</a></li>
                                 <li class="menu_item"><a href="#none">Q&A</a></li>
                                 <li class="menu_item"><a href="#none">자료실</a></li>
-                                <li class="menu_item"><a href="#none">나기기</a></li>
+                                <li class="menu_item"><a href="#none">나가기</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -110,6 +110,7 @@
                         <div class="step_box">
                             <div class="step_tit"><span class="step_sta">Step 2.</span> 다음 본문을 잘 읽은 후, 5초뒤 빈칸에 알맞은 단어를 순서대로 맞춰주세요.</div>
                             <div class="step_cont">
+                                <div class="intervalTimes">00</div>
                                 <div class="exam_box type_txt">
                                     <div class="exam_inner">
                                         <p class="txt" id="blankExam">
@@ -138,7 +139,7 @@
                                 </div>
                                 <div class="btn_box">
                                     <button type="button" id="submitBtn" class="btn exam_fin">제출하기</button>
-                                    <button type="button" id="blankView" class="btn read_txt" disabled>본문 다시보기(5초)</button>
+                                    <button type="button" id="blankView" class="btn read_txt" disabled>본문 다시보기(<span class="intervalTimes2">05</span>초)</button>
                                 </div>
                             </div>
                         </div>
@@ -258,7 +259,7 @@
                             setTimeout(function() {
                                 $('#countDown').fadeOut().removeClass('active'); // 1초 뒤에 #countDown 요소 숨기기
                                 $('.exam_timer_box').removeClass('non_time').addClass('active');; // 1초 뒤에 #countDown 요소 숨기기
-                                
+                                intervalTimes();
                                 chgInp ();
                             }, 1000); // 1000 밀리초 = 1초
                             
@@ -292,6 +293,7 @@
             });
 
             $("#blankView").on("click", function () {
+                intervalTimes();
                 clearTimeout(timerId);
                 $("#blankExam").html(originalContent);
                 $(".input_blank").each(function () {
@@ -352,7 +354,19 @@
             
         });
 
+        function intervalTimes (){
+            let count = 4;
+            const intervalId = setInterval(() => {
+                $('.intervalTimes2').text(count.toString().padStart(2, '0'));
+                count--;
+            }, 1000);
 
+            setTimeout(() => {
+                $('.intervalTimes2').text('05');
+                clearInterval(intervalId);
+            }, 5000);
+        }
+        
         const popupEvent = new CustomEvent('popupOpened', { detail: 'sample2' });
 
         function startTimer_ui() {
@@ -389,7 +403,6 @@
             // 팝업이 열리면 실행되는 이벤트 리스너를 추가합니다.
             document.addEventListener('popupOpened', function(event) {
                 const popupName = event.detail;
-
                 // 현재 날짜와 시간을 가져옵니다.
                 const now = new Date();
                 const month = String(now.getMonth() + 1).padStart(2, '0');

@@ -98,7 +98,7 @@
                                 <li class="menu_item"><a href="#none">공지사항</a></li>
                                 <li class="menu_item"><a href="#none">Q&A</a></li>
                                 <li class="menu_item"><a href="#none">자료실</a></li>
-                                <li class="menu_item"><a href="#none">나기기</a></li>
+                                <li class="menu_item"><a href="#none">나가기</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -183,7 +183,7 @@
             </div>
         </div>
 
-        <div id="lyDim" onclick="closePopupOnDimClick2()"></div>
+        <div id="lyDim"></div>
 
         <!-- footer -->
         <footer id="footer" class="type_gray">
@@ -252,10 +252,10 @@
         function countDownQuestion(){
             var question_data = [
                 {question: '예술', answer:'O'},
-                {question: '설명', answer:'X'},
+                {question: '설명', answer:'O'},
                 {question: '창조', answer:'O'},
                 {question: '자기극복', answer:'O'},
-                {question: '아티스트', answer:'X'},
+                {question: '아티스트', answer:'O'},
             ];
             var currentQuestionIndex = 0;
             var correctAnswers = [];
@@ -306,7 +306,7 @@
                         seconds = 59;
                         minutes--;
                         if (minutes < 0) {
-                            finishQuiz();
+                            finishQuiz('time_out');
                             resetTimer();
                         }
                     }
@@ -341,7 +341,7 @@
             }
 
             // 퀴즈 결과 출력 및 타이머 정지 함수
-            function finishQuiz() {
+            function finishQuiz(time_sta) {
                 stopTimer();
                 $('.result_info .info_txt .corr').text(correctAnswers.length+' 개');
                 $('#submitPop .answer_list span').remove();
@@ -349,11 +349,31 @@
                 $.each(correctAnswers, function(index, item){
                     answer_html += '<span class="answer_item corr">'+item.question+'</span>';
                 })
+                if(time_sta == 'time_out'){
+                    if( correctAnswers.length + wrongAnswers.length != question_data.length){
+                        var question_data3 = [];
+                        for (var i = 0; i < question_data.length; i++) {
+                            var questionFoundInData2 = false;
+                            for (var j = 0; j < correctAnswers.length; j++) {
+                                if (question_data[i].question === correctAnswers[j].question) {
+                                questionFoundInData2 = true;
+                                break;
+                                }
+                            }
+                            if (!questionFoundInData2) {
+                                question_data3.push(question_data[i]);
+                            }
+                        }
+                        $.each(question_data3, function(index, item){
+                            answer_html += '<span class="answer_item err">'+item.question+'</span>';
+                        })
+                    }
+                } else {
+                    $.each(wrongAnswers, function(index, item){
+                        answer_html += '<span class="answer_item err">'+item.question+'</span>';
+                    })
+                }
 
-                $.each(wrongAnswers, function(index, item){
-                    answer_html += '<span class="answer_item err">'+item.question+'</span>';
-                })
-                
                 $('#submitPop .answer_list').append(answer_html);
                 openPopup('submitPop');
             }

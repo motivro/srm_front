@@ -2,22 +2,87 @@ $(document).ready(function(){
     const $table = $('#table');
     const $tbody = $table.find('tbody');
     const noColumnIndex = 0;
-
+    var colspanSta = false;
     // 초기 데이터를 "NO" 열 기준으로 배열에 저장하여 고정
     saveNoData();
+
+    var thElements2 = document.querySelectorAll('.mt_tbl th');
+    for (var i = 0; i < thElements2.length; i++) {
+        if (thElements2[i].hasAttribute('colspan')) {
+            colspanSta = true
+        }
+        if(colspanSta){
+            thElements2[i].classList.add('ch_po');
+        }
+    }
+
+    var cols_sta = 0;
+    var rows_sta = 0;
+
+    $.each($('.mt_tbl thead tr'), function(index, data){
+        $.each($('.mt_tbl thead tr').eq(index).children('th'), function(s_index, s_data){
+            if($('.mt_tbl thead tr').eq(index).children('th').eq(s_index).attr('colspan')){
+                cols_sta++;
+            }
+
+            if(cols_sta> 0 && $('.mt_tbl thead tr').eq(index).children('th').eq(s_index).attr('rowspan')){
+                rows_sta++;
+            }
+
+            if(index == 1){
+                $('.mt_tbl thead tr').eq(index).children('th').eq(s_index).addClass('two_row')
+            }
+        })
+    })
+
+    // console.log('cols_sta : ' + cols_sta, 'rows_sta : '+rows_sta);
 
     $('.sort_col').on('click', function () {
         const columnIndex = $(this).parent().index();
         const isAscending = $(this).hasClass('sort_up');
+        var thElements = document.querySelectorAll('.mt_tbl th');
+        var rowspan = 0;
+        var colspan = 0;
+        for (var i = 0; i < thElements.length; i++) {
+            if (thElements[i].hasAttribute('rowspan')) {
+                var rowspan = Number(thElements[i].getAttribute('rowspan'));
+            }
+            if (thElements[i].hasAttribute('colspan')) {
+                if (thElements[i].hasAttribute('colspan')) {
+                    colspan++;
+                }
+            }
+        }
 
-        if (columnIndex !== noColumnIndex) {
+        var last_rowcol_num = rowspan + colspan;
+        var thElements = document.querySelectorAll('th');
+        var index = -1;
+        for (var i = 0; i < thElements.length; i++) {
+            if (thElements[i].textContent.trim() === $(this).text().trim()) {
+                index = i;
+                break;
+            }
+        }
+        var sdfun = $(this).closest('th').hasClass('ch_po');
+        // if (columnIndex !== noColumnIndex) {
+        if ($(this).text().trim() != 'No') {
             // "NO" 열을 제외한 다른 열을 클릭한 경우에만 정렬
-            sortTableByColumn(columnIndex, isAscending);
+            if(sdfun){
+                if($(this).closest('th').hasClass('two_row')){
+                    index = index - (rows_sta + cols_sta);
+                } else {
+                    index = index + cols_sta;
+                }
+                sortTableByColumn(index, isAscending);
 
+            } else {
+                sortTableByColumn(columnIndex, isAscending);
+            }
             // 다른 sort_col을 클릭했을 때 이전에 눌렀던 sort_col에서 클래스 제거
             $('.sort_col').not(this).removeClass('sort_up sort_down');
         }
 
+        var columnIndex2 = $(this).parent().children().index($(this));
         // 정렬 방식을 토글
         $(this).toggleClass('sort_up', !isAscending);
         $(this).toggleClass('sort_down', isAscending);
@@ -113,6 +178,8 @@ $(document).ready(function(){
             const aValue = $(a).find('td').eq(columnIndex).text().trim();
             const bValue = $(b).find('td').eq(columnIndex).text().trim();
             
+            // console.log(columnIndex)
+            // console.log(aValue, bValue)
             if (isAscending) {
                 return compareValues(aValue, bValue);
             } else {
@@ -477,7 +544,7 @@ var selectUi2 = {
         var selectedValue = obj.text();
         obj.closest('.select_box').find('.select_name').text(selectedValue);
         // 선택된 값이 "[M4-1-2]조별 주관식 문제 풀이"인 경우 페이지 이동을 수행합니다.
-        if (selectedValue === '[M4-1-2]조별 주관식 문제 풀이') {
+        if (selectedValue === '[M1-1-1]개인별 본문 읽기') {
             // 페이지 이동을 수행합니다.
             window.location.href = 'work_result_2_1.html'; // 해당 링크 주소를 입력하세요.
         }
@@ -613,7 +680,6 @@ toast = (string, location) => {
     }, 10);
 }
 toastClose = (obj) =>{
-    console.log(123)
     obj.closest('.idt_toast').removeClass('reveal')
 }
 
