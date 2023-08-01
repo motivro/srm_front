@@ -90,6 +90,8 @@
 .step_cont.oxquiz{text-align: center;}
 .step_cont.oxquiz .exam_box{display: inline-block;width:100%;max-width: 400px;padding: 45px 0;}
 .step_cont.oxquiz .exam_box .exam{font-size: 74px;font-weight: 400;line-height:90px;color: var(--333);}
+.step_cont.oxquiz .exam_box .exam .exam_sta{visibility: visible;}
+.step_cont.oxquiz .exam_box .exam .exam_sta.hidden_txt{visibility: hidden;}
 
 .exam_count{display: flex;justify-content: center;align-items: center;gap: 5px;margin-top: 20px;}
 .exam_count > span{display:block;font-size: 24px;font-weight:400;line-height:29px;color: var(--666);}

@@ -117,7 +117,7 @@
                                 </div>
                                 <div class="exam_box">
                                     <div class="exam_inner">
-                                        <div class="exam"><span class="exam_sta">예술</span></div>
+                                        <div class="exam"><span class="exam_sta hidden_txt">예술</span></div>
                                     </div>
                                 </div>
                                 <div class="exam_count">
@@ -242,6 +242,7 @@
                             $('#countDown').fadeOut().removeClass('active'); // 1초 뒤에 #countDown 요소 숨기기
                             $('.exam_timer_box').removeClass('non_time').addClass('active');; // 1초 뒤에 #countDown 요소 숨기기
                             countDownQuestion();
+                            $('.exam_sta').removeClass('hidden_txt')
                         }, 1000); // 1000 밀리초 = 1초
                     }
                 });

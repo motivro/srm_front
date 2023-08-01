@@ -544,9 +544,11 @@ var selectUi2 = {
         var selectedValue = obj.text();
         obj.closest('.select_box').find('.select_name').text(selectedValue);
         // 선택된 값이 "[M4-1-2]조별 주관식 문제 풀이"인 경우 페이지 이동을 수행합니다.
-        if (selectedValue === '[M1-1-1]개인별 본문 읽기') {
+        if (selectedValue === '[M4-1-2] 조별 주관식 문제 풀이') {
             // 페이지 이동을 수행합니다.
             window.location.href = 'work_result_2_1.html'; // 해당 링크 주소를 입력하세요.
+        }else if(selectedValue === '[M1-1-1] 개인별 본문 읽기'){
+            window.location.href = 'work_result_2.html'; // 해당 링크 주소를 입력하세요.
         }
         // 선택된 옵션을 실제 select 요소에도 반영합니다.
         obj.closest('.select_wrap').children('select').children("option").eq(obj.attr('optnum')).prop('selected', 'selected');
