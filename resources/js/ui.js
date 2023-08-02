@@ -271,12 +271,24 @@ $(document).ready(function(){
         }, 2000);
     });
 
-    $(".rating_item").on("click", function () {
-        // 모든 rating_item에서 "active" 클래스 제거
-        $(".rating_item").removeClass("active");
+    // $(".rating_item").on("click", function () {
+    //     // 모든 rating_item에서 "active" 클래스 제거
+    //     $(".rating_item").removeClass("active");
 
-        // 클릭한 rating_item에만 "active" 클래스 추가
-        $(this).addClass("active");
+    //     // 클릭한 rating_item에만 "active" 클래스 추가
+    //     $(this).addClass("active");
+    // });
+    
+    $(".rating_item").on("click", function () {
+        var $ratingCont = $(this).closest('.rating_cont');
+        var $ratingList = $(this).parent('.rating_list');
+
+        if($ratingCont.hasClass('ty2')){
+            $ratingList.find('.rating_item').removeClass('active');
+        }else{
+            $('.rating_item').removeClass('active');
+        }
+        $(this).addClass('active');
     });
 
     $(".add_good").on("click", function () {

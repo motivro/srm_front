@@ -85,7 +85,7 @@
 
 .step_cont .exam_box.type_txtarea{background-color: var(--f9);}
 .step_cont .exam_box.type_txtarea .exam_inner{width: 100%;line-height:0;}
-.step_cont .exam_box.type_txtarea textarea{width:100%;height:300px;background-color: var(--f9);resize: none;border: none;outline: none;}
+.step_cont .exam_box.type_txtarea textarea{width:100%;height:300px;background-color: var(--f9);resize: none;border: none;outline: none;font-family:'Pretendard', sans-serif;font-size:18px;font-weight:400;line-height:20px;}
 
 .step_cont.oxquiz{text-align: center;}
 .step_cont.oxquiz .exam_box{display: inline-block;width:100%;max-width: 400px;padding: 45px 0;}
