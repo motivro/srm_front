@@ -39,7 +39,7 @@
                         </div>
                         <div class="menu_box">
                             <ul class="user_menu">
-                                <li><a href="./login.html">로그인</a></li>
+                                <li><a href="../login.html">로그인</a></li>
                             </ul>
                         </div>
                     </div>
@@ -121,6 +121,14 @@
                                         <div class="tit">문제풀이 결과</div>
                                         <div class="btn_refresh small sk_tp"><i class="icon refresh"></i></div>
                                     </div>
+									<div class="question_num_wrap">
+                                        <div q_num="1" class="active">1번</div>
+                                        <div q_num="2">2번</div>
+                                        <div q_num="3">3번</div>
+                                        <div q_num="4">4번</div>
+                                        <div q_num="5">5번</div>
+                                        <div q_num="6">종합</div>
+                                    </div>
                                     <table class="mt_tbl type2" id="table">
                                         <colgroup>
                                             <col style="width: 8%;">
@@ -136,21 +144,21 @@
                                             <tr>
                                                 <th rowspan="2" class="first"><div>No</div></th>
                                                 <th rowspan="2"><div class="sort_col">이름</div></th>
-                                                <th rowspan="2"><div >제출시간</div></th>
+                                                <th rowspan="2"><div class="sort_col">제출시간</div></th>
                                                 <th colspan="2"><div>동료평가</div></th>
-                                                <th rowspan="2"><div>교사평가</div></th>
+                                                <th rowspan="2"><div class="sort_col">교사평가</div></th>
                                                 <th rowspan="2"><div class="sort_col">최종점수</div></th>
                                                 <th rowspan="2" class="right"><div>그래프</div></th>
                                             </tr>
                                             <tr>
-                                                <th><div>획득점수</div></th>
-                                                <th><div>평균점수</div></th>
+                                                <th><div class="sort_col">획득점수</div></th>
+                                                <th><div class="sort_col">평균점수</div></th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
                                                 <td><div>1</div></td>
-                                                <td><div class="user_name" onclick="openPopup('finPop')"><i class="icon rating"></i><span class="name_sta">이루다<span class="user_code">(30501)</span></span></div></td>
+                                                <td><div class="user_name" onclick="openPopup('finPop')"><i class="icon rating"></i><span class="name_sta">1조</span></span></div></td>
                                                 <td><div>10:11:31</div></td>
                                                 <td><div>20</div></td>
                                                 <td><div>2.8</div></td>
@@ -167,7 +175,7 @@
                                             </tr>
                                             <tr>
                                                 <td><div>2</div></td>
-                                                <td><div class="user_name" onclick="openPopup('finPop')"><i class="icon rating"></i><span class="name_sta">황지우<span class="user_code">(30502)</span></span></div></td>
+                                                <td><div class="user_name" onclick="openPopup('finPop')"><i class="icon rating"></i><span class="name_sta">2조</span></div></td>
                                                 <td><div>10:11:32</div></td>
                                                 <td><div>17</div></td>
                                                 <td><div>2.8</div></td>
@@ -184,7 +192,7 @@
                                             </tr>
                                             <tr>
                                                 <td><div>3</div></td>
-                                                <td><div class="user_name" onclick="openPopup('finPop')"><i class="icon rating"></i><span class="name_sta">이연제<span class="user_code">(30503)</span></span></div></td>
+                                                <td><div class="user_name" onclick="openPopup('finPop')"><i class="icon rating"></i><span class="name_sta">3조</span></div></td>
                                                 <td><div>10:11:33</div></td>
                                                 <td><div>15</div></td>
                                                 <td><div>2.5</div></td>
@@ -201,7 +209,7 @@
                                             </tr>
                                             <tr>
                                                 <td><div>4</div></td>
-                                                <td><div class="user_name" onclick="openPopup('finPop')"><i class="icon rating"></i><span class="name_sta">한정민<span class="user_code">(30504)</span></span></div></td>
+                                                <td><div class="user_name" onclick="openPopup('finPop')"><i class="icon rating"></i><span class="name_sta">4조</span></div></td>
                                                 <td><div>10:11:34</div></td>
                                                 <td><div>13</div></td>
                                                 <td><div>2.5</div></td>
@@ -218,7 +226,7 @@
                                             </tr>
                                             <tr>
                                                 <td><div>5</div></td>
-                                                <td><div class="user_name" onclick="openPopup('finPop')"><i class="icon rating"></i><span class="name_sta">안준서<span class="user_code">(30505)</span></span></div></td>
+                                                <td><div class="user_name" onclick="openPopup('finPop')"><i class="icon rating"></i><span class="name_sta">5조</span></span></div></td>
                                                 <td><div>10:11:34</div></td>
                                                 <td><div>12</div></td>
                                                 <td><div>2.4</div></td>
@@ -235,7 +243,7 @@
                                             </tr>
                                             <tr>
                                                 <td><div>6</div></td>
-                                                <td><div class="user_name" onclick="openPopup('finPop')"><i class="icon rating"></i><span class="name_sta">선민아<span class="user_code">(30506)</span></span></div></td>
+                                                <td><div class="user_name" onclick="openPopup('finPop')"><i class="icon rating"></i><span class="name_sta">6조</span></span></div></td>
                                                 <td><div>10:12:31</div></td>
                                                 <td><div>11</div></td>
                                                 <td><div>2.4</div></td>
@@ -252,7 +260,7 @@
                                             </tr>
                                             <tr>
                                                 <td><div>7</div></td>
-                                                <td><div class="user_name" onclick="openPopup('finPop')"><i class="icon rating"></i><span class="name_sta">안준서<span class="user_code">(30507)</span></span></div></td>
+                                                <td><div class="user_name" onclick="openPopup('finPop')"><i class="icon rating"></i><span class="name_sta">7조</span></span></div></td>
                                                 <td><div>10:13:31</div></td>
                                                 <td><div>10</div></td>
                                                 <td><div>2.4</div></td>
@@ -269,7 +277,7 @@
                                             </tr>
                                             <tr>
                                                 <td><div>8</div></td>
-                                                <td><div class="user_name" onclick="openPopup('finPop')"><i class="icon rating"></i><span class="name_sta">고도윤<span class="user_code">(30508)</span></span></div></td>
+                                                <td><div class="user_name" onclick="openPopup('finPop')"><i class="icon rating"></i><span class="name_sta">8조</span></span></div></td>
                                                 <td><div>10:13:41</div></td>
                                                 <td><div>9</div></td>
                                                 <td><div>2.48</div></td>
@@ -286,7 +294,7 @@
                                             </tr>
                                             <tr>
                                                 <td><div>9</div></td>
-                                                <td><div class="user_name" onclick="openPopup('finPop')"><i class="icon rating"></i><span class="name_sta">김시윤<span class="user_code">(30509)</span></span></div></td>
+                                                <td><div class="user_name" onclick="openPopup('finPop')"><i class="icon rating"></i><span class="name_sta">9조</span></span></div></td>
                                                 <td><div>10:14:31</div></td>
                                                 <td><div>8</div></td>
                                                 <td><div>2.38</div></td>
@@ -303,7 +311,7 @@
                                             </tr>
                                             <tr>
                                                 <td><div>10</div></td>
-                                                <td><div class="user_name" onclick="openPopup('finPop')"><i class="icon rating"></i><span class="name_sta">권하준<span class="user_code">(30510)</span></span></div></td>
+                                                <td><div class="user_name" onclick="openPopup('finPop')"><i class="icon rating"></i><span class="name_sta">10조</span></span></div></td>
                                                 <td><div>10:15:31</div></td>
                                                 <td><div>7</div></td>
                                                 <td><div>2.38</div></td>
@@ -320,7 +328,7 @@
                                             </tr>
                                             <tr>
                                                 <td><div>11</div></td>
-                                                <td><div class="user_name" onclick="openPopup('finPop')"><i class="icon rating"></i><span class="name_sta">송준<span class="user_code">(30511)</span></span></div></td>
+                                                <td><div class="user_name" onclick="openPopup('finPop')"><i class="icon rating"></i><span class="name_sta">11조</span></div></td>
                                                 <td><div>11:11:31</div></td>
                                                 <td><div>7</div></td>
                                                 <td><div>2.08</div></td>
@@ -337,7 +345,7 @@
                                             </tr>
                                             <tr>
                                                 <td><div>12</div></td>
-                                                <td><div class="user_name" onclick="openPopup('finPop')"><i class="icon rating"></i><span class="name_sta">김규빈<span class="user_code">(30512)</span></span></div></td>
+                                                <td><div class="user_name" onclick="openPopup('finPop')"><i class="icon rating"></i><span class="name_sta">12조</span></div></td>
                                                 <td><div>12:11:31</div></td>
                                                 <td><div>6</div></td>
                                                 <td><div>2.08</div></td>

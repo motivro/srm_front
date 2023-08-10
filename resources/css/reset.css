@@ -34,7 +34,7 @@ time, mark, audio, video {
 
 article, aside, details, figcaption, figure, footer, header, main, hgroup, nav, section, summary, div {display: block;}
 
-input,textarea{margin:0;padding:0;word-break:break-word;}
+input,textarea{margin:0;padding:0;word-break:break-word;font-family:'Pretendard';}
 input{-webkit-appearance:none;-moz-appearance:none;appearance:none;outline:none;border:none;box-sizing:border-box;border-radius:0;}
 input:focus{outline:none;}
 

@@ -46,7 +46,7 @@
                         </div>
                         <div class="menu_box">
                             <ul class="user_menu">
-                                <li><a href="./login.html">로그인</a></li>
+                                <li><a href="../login.html">로그인</a></li>
                             </ul>
                         </div>
                     </div>
@@ -142,7 +142,7 @@
                                         <tbody>
                                             <tr>
                                                 <td class="ta_c"><div>1</div></td>
-                                                <td class="ta_c" onclick="openPopup('finPop')"><span class="ms_over">다음중 글쓰기 계획을 세울 때 포함되는 사항으로서 적절하지 않은 것은？</span></td>
+                                                <td class="ta_c" onclick="openPopup('finPop')"><span class="ms_over">다음 시에 대한 설명으로 적절하지 않은 것은?</span></td>
                                                 <td class="ta_c"><div>23-10-10</div></td>
                                                 <td class="ta_c"><div>0</div></td>
                                             </tr>
@@ -197,7 +197,7 @@
                                                 </div>
                                             </th>
                                             <td class="ta_l">
-                                                <input type="text" value="주제">
+                                                <input type="text" value="계절적 배경은 봄이다.">
                                             </td>
                                         </tr>
                                         <tr class="answer_cont">
@@ -211,7 +211,7 @@
                                                 </div>
                                             </th>
                                             <td class="ta_l">
-                                                <input type="text" value="감동">
+                                                <input type="text" value="시각적 후각적 심상이 드러나 있다.">
                                             </td>
                                         </tr>
                                         <tr class="answer_cont">
@@ -225,7 +225,7 @@
                                                 </div>
                                             </th>
                                             <td class="ta_l">
-                                                <input type="text" value="목적">
+                                                <input type="text" value="고목의 상처를 자세하게 묘사하고 있다.">
                                             </td>
                                         </tr>
                                         <tr class="answer_cont">
@@ -239,12 +239,26 @@
                                                 </div>
                                             </th>
                                             <td class="ta_l">
-                                                <input type="text" value="매체">
+                                                <input type="text" value="어린 매화나무와 고목을 소재로 하고 있다.">
+                                            </td>
+                                        </tr>
+                                        <tr class="answer_cont">
+                                            <th class="vertical_mi">
+                                                <div class="cus_inp_box chk_inp type2">
+                                                    <label for="q_a_box4" class="label_box">5번
+                                                        <input type="radio" id="q_a_box4" name="q_a_box">
+                                                        <span class="inp_custom"></span>
+                                                    </label>
+                                                    <div class="q_a_close"></div>
+                                                </div>
+                                            </th>
+                                            <td class="ta_l">
+                                                <input type="text" value="고목을 쓸어 보는 시의 화자의 모습이 드러난다.">
                                             </td>
                                         </tr>
                                     </tbody>
                                 </table>
-
+								<div style="font-size: 14px;">※ 정답을 하나 이상 <u>체크</u>해주세요</div>
                                 <div class="q_add_wrap">
                                     <div class="q_add_line">
                                         <div class="q_a_plus"></div>
@@ -253,6 +267,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="btn_box">
                             <div class="btn btn_list"><a href="#none" onclick="closePopup('finPop')">저장하기</a></div>
                         </div>
@@ -340,7 +355,7 @@
             lang : 'ko-KR',
             placeholder: '문제를 입력해 주세요.',
             tabsize: 2,
-            height: 150,
+            height: 160,
             shortcuts: false,
             disableDragAndDrop: true,
             popover: {
@@ -349,7 +364,7 @@
         });
 
         $('#summernote').summernote();
-        $('#summernote').summernote('insertText', '다음중 글쓰기 계획을 세울 때 포함되는 사항으로서 적절하지 않은 것은？');
+        $('#summernote').summernote('code', '다음중 글쓰기 계획을 세울 때 포함되는 사항으로서 적절하지 않은 것은？<br><br>어린 매화나무는 꽃 피느라 한창이고 사백 년 고목은 꽃 지느라 한창인데 구경꾼들 고목에 더 몰려섰다 둥치도 가지도 꺾이고 구부러지고 휘어졌다 갈라지고 뒤틀리고 터지고 또 튀어나왔다 진물은 얼마나 오래 고여 흐르다가 말라붙었는지 주먹만큼 굵다란 혹이며 패인 구멍들이 험상굿다 거무죽죽한 혹도 구멍도 모양 굵기 깊이 빛깔이 다 다르다 새 진물이 번지는가 개미들 바삐 오르내려도 의연하고 의젓하다 사군자 중 으뜸답다 꽃구경이 아니라 상처 구경이다 상처 깊은 이들에게는 훈장으로 보이는가 상처 도지는 이들에게는 부적으로 보이는가 백년 못된 사람이 매화 사백 년의 상처를 혜아리랴마는 감탄하고 쓸어 보고 어루만지기도 한다 만졌던 손에서 향기까지 맡아 본다 진동하겠지 상처의 향기 상처야말로 더 꽃인 것을');
     </script>
 </body>
 </html>

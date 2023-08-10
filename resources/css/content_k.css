@@ -196,7 +196,7 @@
 .rating_box_mg .icon.good{width: 22px;height: 22px;}
 
 .step_cont .video_exam .exam_box{}
-.step_cont .video_exam .exam_box .txt{font-size: 12px;font-weight: 400;line-height: 15px;color: #000;}
+.step_cont .video_exam .exam_box .txt{font-size: 16px;font-weight: 400;line-height: 20px;color: #000;}
 
 .exam_timer_box.non_time .times{color:#888!important;background-color: var(--d9)!important;}
 .exam_timer_box .times{width:121px;text-align: center;}
