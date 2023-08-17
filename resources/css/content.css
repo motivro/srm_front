@@ -227,3 +227,18 @@
 
 .ly_pop .target_box{display:inline-block;margin-top:20px;padding: 12px;}
 .ly_pop .target_box .exam_target{font-size: 14px;font-weight:500;line-height:17px;color: var(--333);}
+
+.flex_box{display: flex;align-items: stretch;gap: 50px;}
+.flex_box.row_2{justify-content: flex-start;}
+.flex_box .row_box{width: calc(50% - 25px);}
+.flex_box + .inp_box{margin-top: 42px;}
+
+.mt_tbl.type3 tbody th{background-color: #fff;border-right: 1px solid var(--e5);vertical-align: middle;}
+.mt_tbl.type3 tbody th,
+.mt_tbl.type3 tbody td{padding: 10px;}
+.mt_tbl.type3 tbody tr + tr th{border-top: 1px solid var(--e5);}
+.mt_tbl.type3 tbody td.last{border-left: 1px solid var(--e5);}
+.mt_tbl tbody th.va_m{vertical-align: middle;}
+
+.video_exam .video_box .img_box{width: 100%;line-height: 0;}
+.video_exam .video_box .img_box img{width: 100%;}
