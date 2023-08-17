@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>학습활동 || 팀별 순차토론</title>
+    <link rel="stylesheet" href="../../resources/css/common.css">
+    <link rel="stylesheet" href="../../resources/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../../resources/css/content.css">
+    <script src="../../resources/js/jquery-3.6.1.min.js"></script>
+    <script src="../../resources/js/swiper-bundle.min.js"></script>
+    <script src="../../resources/js/ui.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <header id="header">
+            <div class="hd_inner">
+                <!-- <div id="ham_btn"><div class="line_box"></div></div> -->
+                <div class="hd_left">
+                    <h1 class="logo"><a href="/"><img src="../../resources/img/common/logo.svg" alt=""><span class="sound_only">소크라테스 교실</span></a></h1>
+                    <div class="menu">
+                        <div class="subject">국어</div>
+                        <div class="class"><span class="grade_sta">3</span>학년 <span class="class_sta">3</span>반</div>
+                        <div class="lesson">(<span class="date_sta">수</span>) <span class="lesson_sta">2,3</span>교시</div>
+                    </div>
+                </div>
+                <div class="util is_login">
+                    <!-- 로그링 -->
+                    <div class="member_zone">
+                        <div id="user_menu_btn" class="profile">
+                            <div class="user_infor">
+                                <span class="user_thumb"><img src="../../resources/img/common/user_thumb.svg" alt="유저프로필 이미지"></span>
+                                <span class="user_name"><span class="name_sta">홍길동</span>님</span>
+                            </div>
+                            <i class="icon arrow arrow_d"></i>
+                        </div>
+                        <div class="menu_box">
+                            <ul class="user_menu">
+                                <li><a href="../login.html">로그인</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- //로그인 -->
+                </div>
+            </div>
+        </header>
+        <!-- //header -->
+
+        <!-- container -->
+        <div id="container" class="sub">
+            <!-- intro -->
+            <section class="content_top sub">
+                <div class="inner inner_left">
+                    <div class="card_wrap">
+                        <ul class="card_list">
+                            <li class="card_item ty1">
+                                <div class="card_inner">
+                                    <div class="item_infor">
+                                        <div class="info_cate">
+                                            <div class="cate_date">8주</div>
+                                            <div class="cate_type team">팀</div>
+                                        </div>
+                                        <div class="info_tit">
+                                            <div class="tit">
+                                                <span class="tit_cate">[M6-4-1]</span>
+                                                <span class="tit_name">팀별 순차토론</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="btn_box">
+                                        <a href="./m6_4_1_step1.html" class="btn btn_attend active"><i class="icon attend"></i><span class="btn_name">참여</span></a>
+                                        <a href="./m6_4_1_step2.html" class="btn btn_rating "><i class="icon rating"></i><span class="btn_name">평가</span></a>
+                                        <a href="./m6_4_1_step3.html" class="btn btn_result"><i class="icon result"></i><span class="btn_name">결과</span></a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contents">
+                <div class="inner">
+                    <!-- profile_lnb -->
+                    <nav id="lnb">
+                        <div class="lnb_top" menu-cate="learning">
+                            <div class="top_cont">
+                                <div class="cate">learning</div>
+                                <div class="tit">학습활동</div>
+                            </div>
+                        </div>
+                        <div class="lnb_menu">
+                            <ul class="menu_list">
+                                <li class="menu_item"><a class="active" href="../../html/index.html">학습활동</a></li>
+                                <li class="menu_item"><a href="#none">수업안내</a></li>
+                                <li class="menu_item"><a href="#none">공지사항</a></li>
+                                <li class="menu_item"><a href="#none">Q&A</a></li>
+                                <li class="menu_item"><a href="#none">자료실</a></li>
+                                <li class="menu_item"><a href="#none">나가기</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <!-- //profile_lnb -->
+
+                    <!-- main_cont -->
+                    <div id="main">
+                        <div class="notice_box">
+                            <div class="noti_tit">주의사항</div>
+                            <div class="box_inner type2">
+                                <p>1. 우선 양팀은 토론순서표를 각각 입력한 후 아래 토론 순서표를 확인</p>
+                                <p>2. 확인후 1라운드 시작. A팀 제1주자(A1)가 B팀 제1주자(B1)에게 먼저 질문하고 B1이 이에 답변. 이후 B1이 질문하고 A1이 답변. 1라운드 종료</p>
+                                <p>3. 2라운드 시작. B2가 A2에 먼저 질문하고 A2가 답변. 이후 A2가 B2에게 질문하고 B2가 답변. 2라운드 종료</p>
+                                <p>4. 같은 요령으로 3,4,5,6,7,8,9,10 라운드를 전원 참여 진행. 홀수팀원의 경우 상대팀원이 추가로 상대 참여. (순서표 순서대로 진행)</p>
+                                <p>5. 매라운드 종료시마다 ‘평가‘ 버튼 눌러서 동료평가 점수(5점 만점)를 토론대결한 두선수에게 각각 입력.(동일 점수 입력 불가!)</p>
+                            </div>
+                        </div>
+                        <div class="notice_box mgt_42">
+                            <div class="noti_tit">토론 순서표</div>
+                            <div class="tbl_wrap">
+                                <table class="mt_tbl">
+                                    <colgroup>
+                                        <col style="width:auto;">
+                                        <col style="width:auto;">
+                                        <col style="width:auto;">
+                                        <col style="width:auto;">
+                                        <col style="width:auto;">
+                                        <col style="width:auto;">
+                                        <col style="width:auto;">
+                                        <col style="width:auto;">
+                                        <col style="width:auto;">
+                                        <col style="width:auto;">
+                                        <col style="width:auto;">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th><div>순서</div></th>
+                                            <th><div>1</div></th>
+                                            <th><div>2</div></th>
+                                            <th><div>3</div></th>
+                                            <th><div>4</div></th>
+                                            <th><div>5</div></th>
+                                            <th><div>6</div></th>
+                                            <th><div>7</div></th>
+                                            <th><div>8</div></th>
+                                            <th><div>9</div></th>
+                                            <th><div>10</div></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th><div>A팀</div></th>
+                                            <td><div>이루다</div></td>
+                                            <td><div>황지우</div></td>
+                                            <td><div>이연제</div></td>
+                                            <td><div>한정민</div></td>
+                                            <td><div>안준서</div></td>
+                                            <td><div>선민아</div></td>
+                                            <td><div>안준서</div></td>
+                                            <td><div>고도윤</div></td>
+                                            <td><div>김시윤</div></td>
+                                            <td><div>권하준</div></td>
+                                        </tr>
+                                        <tr>
+                                            <th><div>B팀</div></th>
+                                            <td><div>송준</div></td>
+                                            <td><div>김규빈</div></td>
+                                            <td><div>정성윤</div></td>
+                                            <td><div>박창언</div></td>
+                                            <td><div>김동권</div></td>
+                                            <td><div>이지연</div></td>
+                                            <td><div>박수석</div></td>
+                                            <td><div>정동식</div></td>
+                                            <td><div>홍석표</div></td>
+                                            <td><div>오경수</div></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!-- //main_cont -->
+                </div>
+            </section>
+        </div>
+        <!-- //container -->
+
+        <!-- footer -->
+        <footer id="footer" class="type_gray">
+            <div class="ft_inner">
+                <div class="left">
+                    <h1 class="logo"><a href="/"><img src="../../resources/img/common/logo.svg" alt=""><span class="sound_only">소크라테스 교실</span></a></h1>
+                    <div class="copyright">COPYRIGHT (C)2023 Technology-Based Active Learning., <br class="mo_only">All Rights Reserved.</div>
+                </div>
+                <div class="terms_box">
+                    <ul>
+                        <li><a href="#none">Terms of Service</a></li>
+                        <li><a href="#none">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- //footer -->
+    </div>
+    <script>
+        $(document).ready(function(){
+            selectUi.init();
+        });
+    </script>
+</body>
+</html>

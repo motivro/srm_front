@@ -238,7 +238,17 @@
 .mt_tbl.type3 tbody td{padding: 10px;}
 .mt_tbl.type3 tbody tr + tr th{border-top: 1px solid var(--e5);}
 .mt_tbl.type3 tbody td.last{border-left: 1px solid var(--e5);}
-.mt_tbl tbody th.va_m{vertical-align: middle;}
+.mt_tbl .va_m{vertical-align: middle;}
 
 .video_exam .video_box .img_box{width: 100%;line-height: 0;}
 .video_exam .video_box .img_box img{width: 100%;}
+.mgt_42{margin-top: 42px;}
+.notice_box .box_inner.type2 p + p{margin-top: 5px;}
+.mt_tbl.type2.new tbody td{border-right: 1px solid var(--e5);}
+.mt_tbl.type2.new tbody td.last{border-right: 0;}
+.mt_tbl.type2.new tbody td.average{background-color: #142043;font-size:16px;font-weight: 700;color: #fff;}
+.mt_tbl.type2.new tbody .score{color: var(--red);}
+.mt_tbl.type2.new tbody .result_sta{color: #3973B7;}
+
+.tbl_wrap.type_new .step_box .top_info .user_info{font-size: 18px;}
+.tbl_wrap.type_new .step_box .top_info .user_info .user_sta{font-size: 18px;}
